@@ -1,0 +1,10 @@
+@import '../color.scss';
+
+.forgotPassContainer {
+    display: flex;
+    align-items: center;
+}
+.forgotPass {
+    text-decoration: none;
+    color: $Text-Secondary;
+}

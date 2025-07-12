@@ -1,0 +1,11 @@
+@import './components/color.scss';
+
+.page {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    color: $Text-Primary;
+}
+.choose {
+    font-size: 1000px;
+}

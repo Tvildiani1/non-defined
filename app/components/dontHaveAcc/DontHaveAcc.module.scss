@@ -1,0 +1,12 @@
+@import '../color.scss';
+
+.dontHaveAcc {
+    display: flex;
+    color: $Text-Primary;
+    flex-direction: row;
+}
+.signUp {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}

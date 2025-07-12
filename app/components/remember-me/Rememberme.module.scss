@@ -1,0 +1,30 @@
+@import '../color.scss';
+
+.rememberMeContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+.rememberMe {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: $Text-Primary;
+}
+.input {
+    display: flex;
+    color: $Background-dark;
+    flex-direction: row;
+    align-items: center;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    color: $Text-Primary;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
