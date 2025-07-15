@@ -1,20 +1,17 @@
-import Image from "next/image";
-import styles from "./page.module.scss";
+'"use client";'
 
-export default function Home() {
+import styles from './page.module.scss';
+import Link from 'next/link';
+
+export default function HomePage() {
   return (
-    <div className={styles.page}>sss
-      <div>
-        <h1 className={styles.choose}>Choose your path</h1>
-        <div>
-          <div>
-            <a rel="stylesheet" href="./components/pages/LoginPage/Page.tsx">Login</a>
-          </div>
-          <div>
-            <a rel="stylesheet" href="./components/pages/RegisterPage/RegisterPage.tsx">Register</a>
-          </div>
-        </div>
+    <main className={styles.homeContainer}>
+      <h1 className={styles.title}>🎵 Welcome to Music Auth App</h1>
+      <div className={styles.links}>
+        <Link href="/login" className={styles.linkButton}>Login</Link>
+        <Link href="/signup" className={styles.linkButton}>Sign Up</Link>
       </div>
-    </div>
-  );
+    </main>
+  )
 }
+

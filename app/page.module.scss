@@ -1,11 +1,67 @@
 @import './components/color.scss';
 
-.page {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    color: $Text-Primary;
+.title {
+  color: $Text-Primary;
+  font-size: 4rem;
+  margin-bottom: 2rem;
 }
-.choose {
-    font-size: 1000px;
+
+.links {
+  display: flex;
+  gap: 5rem;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.linkButton {
+  background-color: grey;
+  color: white;
+  padding: 2rem;
+  border: 2px solid white;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: background 0.3s;
+}
+
+.linkButton:hover {
+  background-color: gainsboro;
+}
+
+.linkButton:active {
+  background-color: rgb(9, 255, 0);
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .linkButton {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    border-radius: 999px;
+  }
+}
+
+/* 💻 Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .links {
+    gap: 3rem;
+  }
+
+  .linkButton {
+    padding: 1.5rem;
+    font-size: 2rem;
+  }
 }
