@@ -1,24 +1,21 @@
 'use client'
 
 import React, { useState } from 'react'
-import styles from './Register.module.scss'
+import styles from './SignUpForm.module.scss'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function SignupForm() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [repeatPassword, setRepeatPassword] = useState('')
-  const [error, setError] = useState(false)
 
-  const handlePasswordChange = (value: string) => {
-    setPassword(value)
-    const isValid = value.length >= 8 && /[A-Z]/.test(value)
-    setError(!isValid)
-  }
-
-  const handleRepeatPasswordChange = (value: string) => {
-    setRepeatPassword(value)
-  }
+  const handleRegister = (e: React.FormEvent) => {
+  e.preventDefault();
+  const user = { email, password };
+  localStorage.setItem('user', JSON.stringify(user));
+  alert('User registered! You can now log in.');
+};
 
   return (
     <div className={styles.formContainer}>
@@ -42,9 +39,9 @@ export default function SignupForm() {
             id="password"
             type="password"
             placeholder="Enter your password"
-            className={`${styles.input} ${error ? styles.error : ''}`}
+            className={styles.input}
             value={password}
-            onChange={(e) => handlePasswordChange(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
 
@@ -55,16 +52,10 @@ export default function SignupForm() {
             placeholder="Repeat your password"
             className={styles.input}
             value={repeatPassword}
-            onChange={(e) => handleRepeatPasswordChange(e.target.value)}
+            onChange={(e) => setRepeatPassword(e.target.value)}
             required
           />
         </div>
-
-        {error && (
-          <p className={styles.errorMessage}>
-            Minimum 8 characters and 1 uppercase letter required
-          </p>
-        )}
 
         <div className={styles.formOptions}>
           <label className={styles.formCheckbox}>
@@ -76,7 +67,7 @@ export default function SignupForm() {
 
         <p className={styles.formDontHaveAcc}>
           Already have an account?{' '}
-          <a className={styles.formLogin} href="/login">Login</a>
+          <Link className={styles.formLogin} href="/auth/login">Login</Link>
         </p>
       </form>
     </div>
