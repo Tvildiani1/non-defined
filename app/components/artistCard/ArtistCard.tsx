@@ -12,7 +12,7 @@ export default function ArtistCard ( { name, icon }: ArtistCardProps) {
   return (
     <div className={styles.card}>
       <img src={icon} alt={name} className={styles.icon}/>
-      <h2 className={styles.name}> {name} </h2>
+      <p className={styles.name}> {name} </p>
     </div>
   )
 }
