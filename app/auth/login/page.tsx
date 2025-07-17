@@ -1,6 +1,6 @@
 'use client';
 
-import styles from './page.module.scss';
+import styles from '../components/login/page.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
