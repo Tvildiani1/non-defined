@@ -60,7 +60,7 @@ export default function SignupForm() {
 
         <p className={styles.formDontHaveAcc}>
           Already have an account?{' '}
-          <Link className={styles.formLogin} href="/auth/login">Login</Link>
+          <Link className={styles.formLogin} href="#">Login</Link>
         </p>
       </form>
     </div>

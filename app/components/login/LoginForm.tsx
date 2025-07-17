@@ -40,7 +40,7 @@ export default function LoginForm() {
           <button type="submit" className={styles.formButton}>Login</button>
           <p className={styles.formDontHaveAcc}>
             Don't have an account?{' '}
-            <Link className={styles.formSignup} href="/auth/signup">Sign up</Link>
+            <Link className={styles.formSignup} href="#">Sign up</Link>
           </p>
         </div>
       </form>
