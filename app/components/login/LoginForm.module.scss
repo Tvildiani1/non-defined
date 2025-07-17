@@ -68,26 +68,10 @@
   opacity: 0.5;
 }
 
-.passwordIcon {
+.togglePassword {
   position: absolute;
   top: 30%;
   right: 5%;
-}
-
-.errorMessage {
-  color: $Error-Alert !important;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-}
-
-.error {
-  border: 2px solid $Error-Alert !important;
-}
-
-.errorMessage {
-  color: $Error-Alert;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
 }
 
 .formOptions {
@@ -103,6 +87,11 @@
   display: flex;
   gap: 8px;
   cursor: pointer;
+  color: $Text-Primary;
+}
+
+.formForgotPass {
+  color: $Text-Secondary;
 }
 
 .formButton {
@@ -133,7 +122,11 @@
   margin-top: 1rem;
 }
 
-.formLogin {
+.formDontHaveAcc > a {
+  color: $Info;
+}
+
+.formSignup {
   color: $Secondary;
   text-decoration: none;
 }

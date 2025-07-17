@@ -1,6 +1,6 @@
-'"use client";'
+'use client';
 
-import LoginPage from './auth/page';
+import LoginPage from './auth/login/page';
 import Page from './auth/signup/page';
 import styles from './page.module.scss';
 

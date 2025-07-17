@@ -6,16 +6,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function SignupForm() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [repeatPassword, setRepeatPassword] = useState('')
-
-  const handleRegister = (e: React.FormEvent) => {
-  e.preventDefault();
-  const user = { email, password };
-  localStorage.setItem('user', JSON.stringify(user));
-  alert('User registered! You can now log in.');
-};
 
   return (
     <div className={styles.formContainer}>
@@ -24,37 +14,40 @@ export default function SignupForm() {
       <form className={styles.form}>
         <div className={styles.formMessage}>
           <label className={styles.title} htmlFor="email">Email</label>
-          <input
-            id="email"
-            type="email"
-            placeholder="Enter your email"
-            className={styles.input}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+          <div className={styles.passwordWrapper}>
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+              className={styles.input}
+              required
+            />
 
-          <label className={styles.title} htmlFor="password">Password</label>
-          <input
-            id="password"
-            type="password"
-            placeholder="Enter your password"
-            className={styles.input}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-
-          <label className={styles.title} htmlFor="repeatPassword">Repeat Password</label>
-          <input
-            id="repeatPassword"
-            type="password"
-            placeholder="Repeat your password"
-            className={styles.input}
-            value={repeatPassword}
-            onChange={(e) => setRepeatPassword(e.target.value)}
-            required
-          />
+            <label className={styles.title} htmlFor="password">Password</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter your password"
+              className={styles.input}
+              required
+            />
+            <span className={styles.toggleIcon}>
+              <Image src="/visibility.svg" width={24} height={24} alt="Toggle" />
+            </span>
+          </div>
+          <div className={styles.passwordWrapper}>
+            <label className={styles.title} htmlFor="repeatPassword">Repeat Password</label>
+            <input
+              id="repeatPassword"
+              type="password"
+              placeholder="Repeat your password"
+              className={styles.input}
+              required
+            />
+            <span className={styles.togglePassword}>
+              <Image src="/visibility.svg" width={24} height={24} alt="Toggle" />
+            </span>
+          </div>
         </div>
 
         <div className={styles.formOptions}>
