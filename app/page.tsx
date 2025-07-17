@@ -1,16 +1,11 @@
 'use client';
 
-import LoginPage from './auth/login/page';
-import Page from './auth/signup/page';
+import LoginForm from './auth/login/page';
+import SignupForm from './auth/signup/page';
 import styles from './page.module.scss';
 
 export default function HomePage() {
   return (
-    <main className={styles.homeContainer}>
-      
-      <div>
-        <LoginPage />
-      </div>
-    </main> 
+    <SignupForm />
   )
 }
