@@ -1,10 +1,10 @@
 'use client';
 
-import styles from '../components/login/page.module.scss';
+import styles from './page.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function LoginForm() {
+export default function Login() {
 
   return (
     <main className={styles.container}>
@@ -18,16 +18,16 @@ export default function LoginForm() {
               type="email"
               placeholder="Enter your Email"
               className={styles.input}
-              required
-            />
+              required />
+              
             <div className={styles.passwordWrapper}>
               <input
+                type='password'
                 placeholder="Enter your password"
                 className={styles.input}
-                required
-              />
+                required />
               <span className={styles.togglePassword}>
-                <Image className={styles.togglePassword} src="/visibility.svg" width={24} height={24} alt="Toggle" />
+                <Image src="/visibility.svg" width={24} height={24} alt="Toggle" />
               </span>
             </div>
 

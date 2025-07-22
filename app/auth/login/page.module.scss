@@ -1,32 +1,34 @@
-@import '../color.scss';
+@import '../components/color.scss';
 
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
 
 .formContainer {
   display: flex;
+  max-width: 367px;
   width: 100%;
   flex-direction: column;
   align-items: center;
 }
 
 .logoImage {
-  width: 102px;
-  height: 102px;
+  max-width: 102px;
+  width: 100%;
+  height: 100%;
+  max-height: 102px;
   margin-bottom: 30px;
-}
-
-.formTitle {
-  color: $Background-dark;
-  font-size: 36px;
-  font-weight: 600;
-  margin-bottom: 32px;
-  font-family: sans-serif;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 367px;
+  width: 100%;
   justify-content: center;
 }
 
@@ -41,12 +43,6 @@
   position: relative;
 }
 
-.title {
-  color: $Background-dark;
-  font-family: sans-serif;
-  font-size: 20px;
-}
-
 .input {
   width: fill;
   height: fixed;
@@ -55,7 +51,7 @@
 }
 
 .input:focus {
-  color: $Text-Primary;
+  color: $Background-dark;
   border: 2px solid $Text-Primary;
   background: #7f00ff0d;
 }
@@ -66,12 +62,7 @@
 
 .togglePassword {
   position: absolute;
-  bottom: 15%;
-  right: 5%;
-}
-.toggleIcon {
-  position: absolute;
-  bottom: 9%;
+  top: 25%;
   right: 5%;
 }
 
@@ -80,7 +71,7 @@
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
-  margin: 20px 0;
+  margin: 0 8px 40px 0;
   color: $Text-Primary;
 }
 
@@ -89,6 +80,11 @@
   gap: 8px;
   cursor: pointer;
   color: $Background-dark;
+}
+
+.formForgotPass {
+  color: $Text-Secondary;
+  text-decoration: none;
 }
 
 .formButton {
@@ -100,10 +96,9 @@
   border-radius: 25px;
   background: #aaaaaa55;
   font-weight: bold;
-  color: #000;
+  color: $Background-dark;
   font-size: 16px;
-  border: 1px solid #aaaaaa55;
-  cursor: pointer;
+  border: #aaaaaa55;
   transition: background 0.3s ease;
 }
 
@@ -116,14 +111,39 @@
   text-align: center;
   font-family: sans-serif;
   font-size: 12px;
-  margin-top: 8px;
+  margin-top: 1rem;
 }
 
-.formLogin {
+.formSignup {
   color: $Secondary;
   text-decoration: none;
 }
 
 .formLogin:hover {
   text-decoration: underline;
+}
+
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  .formContainer {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .formContainer {
+    display: flex;
+  }
 }
