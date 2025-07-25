@@ -4,7 +4,7 @@ import styles from './page.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Signup() {
+export default function SignUp() {
 
   return (
     <div className={styles.container}>
@@ -14,15 +14,17 @@ export default function Signup() {
 
         <form className={styles.form}>
           <div className={styles.formMessage}>
-            <label className={styles.title} htmlFor="email">Email</label>
-            <div className={styles.passwordWrapper}>
+            <div className={styles.inputWrapper}>
+              <label className={styles.title} htmlFor="email">Email</label>
               <input
                 id="email"
                 type="email"
                 placeholder="Enter your email"
                 className={styles.input}
                 required />
-                
+            </div>
+            <div className={styles.inputWrapper}>
+
               <label className={styles.title} htmlFor="password">Password</label>
               <input
                 id="password"
@@ -34,7 +36,7 @@ export default function Signup() {
                 <Image src="/visibility.svg" width={24} height={24} alt="Toggle" />
               </span>
             </div>
-            <div className={styles.passwordWrapper}>
+            <div className={styles.inputWrapper}>
               <label className={styles.title} htmlFor="repeatPassword">Repeat Password</label>
               <input
                 id="repeatPassword"
@@ -42,7 +44,7 @@ export default function Signup() {
                 placeholder="Repeat your password"
                 className={styles.input}
                 required />
-              <span className={styles.togglePassword}>
+              <span className={styles.toggleIcon}>
                 <Image src="/visibility.svg" width={24} height={24} alt="Toggle" />
               </span>
             </div>
@@ -61,7 +63,7 @@ export default function Signup() {
               <Link className={styles.formLogin} href="#">Login</Link>
             </p>
           </div>
-          
+
         </form>
       </div>
     </div>

@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function Login() {
 
   return (
-    <main className={styles.container}>
+    <div className={styles.container}>
       <div className={styles.formContainer}>
         <Image src="/music.svg" width={102} height={102} alt="Logo" className={styles.logoImage} />
         <h2 className={styles.formTitle}>Login</h2>
@@ -49,7 +49,7 @@ export default function Login() {
           </div>
         </form>
       </div>
-    </main>
+    </div>
     
   );
 }
