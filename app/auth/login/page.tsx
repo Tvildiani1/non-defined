@@ -18,26 +18,25 @@ export default function Login() {
               type="email"
               placeholder="Enter your Email"
               className={styles.input}
-              required />
-              
-            <div className={styles.passwordWrapper}>
-              <input
-                type='password'
-                placeholder="Enter your password"
-                className={styles.input}
-                required />
-              <span className={styles.togglePassword}>
-                <Image src="/visibility.svg" width={24} height={24} alt="Toggle" />
-              </span>
-            </div>
-
+              required 
+            />
+          <div className={styles.passwordWrapper}>
+            <input
+              type='password'
+              placeholder="Enter your password"
+              className={styles.input}
+              required
+            />
+            <span className={styles.togglePassword}>
+              <Image src="/visibility.svg" width={24} height={24} alt="Toggle" />
+            </span>
+          </div>
             <div className={styles.formOptions}>
               <label className={styles.formCheckbox}>
                 <input type="checkbox" /> Remember me
               </label>
               <Link href="#" className={styles.formForgotPass}>Forgot password?</Link>
             </div>
-
           </div>
           
           <div className={styles.formFooter}>

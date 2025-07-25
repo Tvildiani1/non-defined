@@ -11,7 +11,6 @@ export default function SignUp() {
       <div className={styles.formContainer}>
         <Image src="/music.svg" width={102} height={102} alt="Logo" className={styles.logoImage} />
         <h2 className={styles.formTitle}>Sign Up</h2>
-
         <form className={styles.form}>
           <div className={styles.formMessage}>
             <div className={styles.inputWrapper}>
@@ -21,17 +20,19 @@ export default function SignUp() {
                 type="email"
                 placeholder="Enter your email"
                 className={styles.input}
-                required />
+                required
+              />
             </div>
-            <div className={styles.inputWrapper}>
 
+            <div className={styles.inputWrapper}>
               <label className={styles.title} htmlFor="password">Password</label>
               <input
                 id="password"
                 type="password"
                 placeholder="Enter your password"
                 className={styles.input}
-                required />
+                required 
+              />
               <span className={styles.toggleIcon}>
                 <Image src="/visibility.svg" width={24} height={24} alt="Toggle" />
               </span>
@@ -43,7 +44,8 @@ export default function SignUp() {
                 type="password"
                 placeholder="Repeat your password"
                 className={styles.input}
-                required />
+                required 
+              />
               <span className={styles.toggleIcon}>
                 <Image src="/visibility.svg" width={24} height={24} alt="Toggle" />
               </span>
