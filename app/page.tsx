@@ -1,7 +1,6 @@
-import MusicCard from "./components/musicCard/MusicCard";
-import PopularCard from "./components/popularSongCard/SongCard";
+"use client";
 
-
+import styles from "./page.module.scss";
 
 export default function Home() {
   return (
