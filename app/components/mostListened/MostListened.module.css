@@ -1,0 +1,41 @@
+.cardRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rowCard { 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rowCard p {
+    display: inline;
+    color: #FFF;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rowCard span {
+    display: inline;
+    color: #7c7c7c;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rowCardTitle {
+    display: inline;
+    color: #7c7c7c;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rowCardFavNSetting {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

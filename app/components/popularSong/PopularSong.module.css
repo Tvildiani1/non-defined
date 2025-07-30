@@ -1,0 +1,37 @@
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.cardsContent {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    min-width: 176px;
+    height: 212px;
+    align-items: center;
+    gap: 16px;
+}.card p {
+    color: #FFF;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}.card span {
+    color: grey;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}.card:hover {
+    padding: 8px;
+    background-color: #A8A8A8;
+    height: fill;
+}
