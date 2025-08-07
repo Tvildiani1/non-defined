@@ -33,9 +33,3 @@
     font-size: 14px;
     font-weight: 600;
 }
-
-.rowCardFavNSetting {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}

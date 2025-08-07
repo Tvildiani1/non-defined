@@ -1,6 +1,7 @@
 'use client';
 
 import MostListened from "./components/mostListened/MostListened";
+import MusicPlayer from "./components/musicPlayerCard/MusicPlayer";
 import PopularSong from "./components/popularSong/PopularSong";
 import TopAlbum from "./components/topAlbum/TopAlbum";
 import TopArtist from "./components/topArtist/TopArtist";
@@ -69,23 +70,26 @@ export default function Home() {
             <div>
               <MostListened />
             </div>
-            
+
             <div>
               <MostListened />
             </div>
-            
+
             <div>
               <MostListened />
             </div>
-            
+
             <div>
               <MostListened />
             </div>
-            
+
             <div>
               <MostListened />
             </div>
           </div>
+        </div>
+        <div className={styles.musicPlayer}>
+          <MusicPlayer />
         </div>
       </div>
     </>

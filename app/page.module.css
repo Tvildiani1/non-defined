@@ -46,6 +46,22 @@
     gap: 8px;
 }
 
+.rowPlayer {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.rowCardPlayBtn {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+    padding: 0 24px;
+}
+
 .cardsTitle {
     display: flex;
     flex-direction: row;
@@ -76,6 +92,8 @@
     align-items: center;
     width: fill;
     justify-content: space-between;
+}.rowCardFavBtn {
+    
 }.boxContent img {
     display: flex;
     width: 72px;
@@ -111,4 +129,7 @@
 .boxText {
     display: flex;
     color: #fff;
+}
+
+.musicPlayer {
 }
