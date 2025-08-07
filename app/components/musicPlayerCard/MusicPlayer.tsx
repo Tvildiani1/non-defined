@@ -42,6 +42,7 @@ export default function MusicPlayer() {
               <div className={styles.rowCardFavBtn}>
                 <img src="/volume.svg" alt="Volume" />
               </div>
+              <hr className={styles.hr}/>
               <p>50</p>
             </div>
           </div>
