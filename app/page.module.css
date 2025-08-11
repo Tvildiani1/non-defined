@@ -131,5 +131,14 @@
     color: #fff;
 }
 
+.mostListened {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 .musicPlayer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
 }

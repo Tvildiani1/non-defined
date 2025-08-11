@@ -3,48 +3,34 @@ import styles from "./MusicPlayer.module.css";
 export default function MusicPlayer() {
     return (
       <>
-        <div className={styles.container}>
-          <div className={styles.cardRow}>
-            <div className={styles.rowCard}>
-              <img src="/roddy Ricch.svg" alt="Roddy Ricch" />
-              <p>
-                The Box
-                <br />
-                <span>Roddy Ricch</span>
-              </p>
-            </div>
-            <div className={styles.rowPlayer}>
-              <div className={styles.rowCardbuttons}>
-                <div className={styles.forwardTime}>
-                  <img src="/playforward.svg" alt="Play" />
-                </div>
-                <div>
-                  <img src="/next.svg" alt="Play" />
-                </div>
-                <div>
-                  <img src="/pause.svg" alt="Pause" />
-                </div>
-                <div className={styles.next}>
-                  <img src="/next.svg" alt="Skip" />
-                </div>
-                <div className={styles.shuffle}>
-                  <img src="/shuffle.svg" alt="Shuffle" />
-                </div>
-              </div>
+        <div className={styles.player}>
+          <div className={styles.playerLeft}>
+            <img src="/roddy Ricch.svg" alt="The Box" />
+            <p>
+              The Box
+              <span>Roddy Ricch</span>
+            </p>
+          </div>
 
-              <div className={styles.rowCardTime}>
-                <p>1:08</p>
-                <hr className={styles.hr} />
-                <p>3:16</p>
-              </div>
+          <div className={styles.playerCenter}>
+            <div className={styles.playerNavigation}>
+              <img src="/playForward.svg" alt="PlayForward" />
+              <img src="/next.svg" alt="Play" />
+              <img src="/pause.svg" alt="play" />
+              <img className={styles.rotated} src="/next.svg" alt="next" />
+              <img src="/shuffle.svg" alt="Shuffle" />
             </div>
-            <div className={styles.rowCardFavNSetting}>
-              <div className={styles.rowCardFavBtn}>
-                <img src="/volume.svg" alt="Volume" />
-              </div>
-              <hr className={styles.hr}/>
-              <p>50</p>
+            <div className={styles.playerTime}>
+              1:29
+              <input type="range" min="0" max="100" value="50" />
+              3:46
             </div>
+          </div>
+
+          <div className={styles.playerRight}>
+            <img src="/volume.svg" alt="" />
+            <input type="range" min="0" max="100" value="50" />
+            <p>50</p>
           </div>
         </div>
       </>

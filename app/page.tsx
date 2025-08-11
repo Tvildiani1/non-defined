@@ -62,31 +62,10 @@ export default function Home() {
           <p className={styles.thrdTitle}>
             The most listened to hit of the week
           </p>
-          <div className={styles.rowCards}>
-            <div>
-              <MostListened />
-            </div>
-
-            <div>
-              <MostListened />
-            </div>
-
-            <div>
-              <MostListened />
-            </div>
-
-            <div>
-              <MostListened />
-            </div>
-
-            <div>
-              <MostListened />
-            </div>
-
-            <div>
-              <MostListened />
-            </div>
-          </div>
+        </div>
+        <div className={styles.mostListened}>
+          <MostListened />
+          <MostListened />
         </div>
         <div className={styles.musicPlayer}>
           <MusicPlayer />

@@ -1,35 +1,74 @@
-.cardRow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.songList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-Width: 80;
+  width: 100%;
 }
 
-.rowCard { 
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.songList div {
+  display: flex;
+  align-items: center;
 }
 
-.rowCard p {
-    display: inline;
-    color: #FFF;
-    font-family: sans-serif;
-    font-size: 14px;
-    font-weight: 600;
+.songDetails {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  width: 630px;
 }
 
-.rowCard span {
-    display: inline;
-    color: #7c7c7c;
-    font-family: sans-serif;
-    font-size: 14px;
-    font-weight: 600;
+.songDetails p {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  color: #FFF;
 }
 
-.rowCardTitle {
-    display: inline;
-    color: #7c7c7c;
-    font-family: sans-serif;
-    font-size: 14px;
-    font-weight: 600;
+.songList span {
+  color: grey;
+}
+
+.songRate {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: sans-serif;
+  width: 600px;
+  color: #FFF;
+}
+
+.songActions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.imgOne {
+  cursor: pointer;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+}.imgOne:active {
+  color: red;
+}.imgOne:checked {
+  color: red;
+}
+
+
+.imgTwo {
+  cursor: pointer;
+  display: flex;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
 }

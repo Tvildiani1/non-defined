@@ -1,23 +1,22 @@
-import Link from "next/link";
 import styles from "./MostListened.module.css";
 
 export default function MostListened() {
     return (
       <>
-        <div className={styles.container}>
-          <div className={styles.cardRow}>
-            <div className={styles.rowCard}>
-              <img src="/roddy Ricch.svg" alt="Roddy Ricch" />
-              <p>
-                The Box
-                <br />
-                <span>Roddy Ricch</span>
+        <div className={styles.songList}>
+          <div>
+            <div className={styles.songDetails}>
+              <img src="/roddy Ricch.svg" alt="The Box" />
+              <p>The Box
+              <span>
+                Roddy Ricch
+              </span>
               </p>
             </div>
-            <p className={styles.rowCardTitle}>3.24</p>
-            <div className={styles.rowCardFavNSetting}>
-              <img src="/heart.svg" alt="Heart" />
-              <img src="/dots.svg" alt="Esential/Dots" />
+            <div className={styles.songRate}>3.24</div>
+            <div className={styles.songActions}>
+              <img className={styles.imgOne} src="/heart.svg" alt="Heart" />
+              <img  className={styles.imgTwo} src="/dots.svg" alt="Esential" />
             </div>
           </div>
         </div>
