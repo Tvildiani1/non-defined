@@ -1,11 +1,11 @@
 .player {
   display: flex;
-  flex-direction: row;
-  margin-top: 22%;
-  width: 66%;
+  position: fixed;
+  width: 1303px;
+  align-items: center;
+  flex-shrink: 0;
   border-radius: 10px;
-  background: #a54cffe1;
-  padding: 20px;
+  background: rgba(165, 76, 255, 0.70);
 }
 
 .playerLeft {
@@ -13,7 +13,8 @@
   flex-direction: row;
   gap: 8px;
   align-items: center;
-  width: 1340px;
+  width: fill;
+  padding-left: 8px;
 }
 
 .playerCenter {
@@ -27,6 +28,7 @@
   display: flex;
   flex-direction: row;
   width: fill;
+  padding: 6px;
   gap: 18px;
   align-items: center;
 }
@@ -51,4 +53,5 @@
   font-size: 120%;
   font-weight: 400;
   font-family: sans-serif;
+  padding-right: 8px;
 }

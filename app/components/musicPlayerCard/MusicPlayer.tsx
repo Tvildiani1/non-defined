@@ -29,7 +29,7 @@ export default function MusicPlayer() {
 
           <div className={styles.playerRight}>
             <img src="/volume.svg" alt="" />
-            <input type="range" min="0" max="100" value="50" />
+            <input type="range" min="0" max="100"  value="50" />
             <p>50</p>
           </div>
         </div>

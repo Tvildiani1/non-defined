@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <div className={styles.heading}>heading</div>
       <div className={styles.container}>
-        <p className={styles.frstTitle}>Top Artist</p>
+      <p className={styles.frstTitle}>Top Artist</p>
         <div className={styles.cardsTitle}>
           <div className={styles.cards}>
             <TopArtist />
