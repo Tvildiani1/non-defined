@@ -1,76 +1,77 @@
 'use client';
 
-import MostListened from "./components/mostListened/MostListened";
+import ArtistCard from "./components/artistCard/ArtistCard";
 import MusicPlayer from "./components/musicPlayerCard/MusicPlayer";
-import PopularSong from "./components/popularSong/PopularSong";
-import TopAlbum from "./components/topAlbum/TopAlbum";
-import TopArtist from "./components/topArtist/TopArtist";
-import TopChart from "./components/topChart/TopChart";
+import PopularCard from "./components/popularSongCard/SongCard";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <>
-      <div className={styles.heading}>heading</div>
-      <div className={styles.container}>
-      <p className={styles.frstTitle}>Top Artist</p>
-        <div className={styles.cardsTitle}>
-          <div className={styles.cards}>
-            <TopArtist />
-          </div>
-
-          <div className={styles.cards}>
-            <TopArtist />
-          </div>
-        </div>
-
+    <div className={styles.container}>
+      <h2 className={styles.h2}>heading</h2>
+      <div className={styles.main}>
         <div>
-          <p className={styles.scndTitle}>Popular Song</p>
-        </div>
-        <div className={styles.cardsTitle}>
-          <div className={styles.cards}>
-            <PopularSong />
-          </div>
-
-          <div className={styles.cards}>
-            <PopularSong />
+          <h1 className={styles.h1}>Top Artist</h1>
+          <div className={styles.artistGrid}>
+            <ArtistCard name="eminem" icon="/eminem.svg" />
+            <ArtistCard name="eminem" icon="/eminem.svg" />
+            <ArtistCard name="eminem" icon="/eminem.svg" />
+            <ArtistCard name="eminem" icon="/eminem.svg" />
+            <ArtistCard name="eminem" icon="/eminem.svg" />
+            <ArtistCard name="eminem" icon="/eminem.svg" />
+            <ArtistCard name="eminem" icon="/eminem.svg" />
           </div>
         </div>
         <div>
-          <p className={styles.scndTitle}>Top Albums</p>
-          <div className={styles.cardsTitle}>
-            <div className={styles.cards}>
-              <TopAlbum />
-            </div>
-
-            <div className={styles.cards}>
-              <TopAlbum />
-            </div>
+          <h1 className={styles.h1}>Popular Song</h1>
+          <div className={styles.artistGrid}>
+            <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
+            <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
+            <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
+            <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
+            <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
+            <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
+            <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
           </div>
-          <div>
-            <p className={styles.thrdTitle}>Top Chart</p>
-            <div className={styles.cardsTitle}>
-              <div className={styles.cards}>
-                <TopChart />
-              </div>
-
-              <div className={styles.cards}>
-                <TopChart />
-              </div>
-            </div>
+        </div>
+        <div>
+          <h1 className={styles.h1}>Top Album</h1>
+          <div className={styles.artistGrid}>
+            <PopularCard icon="/selfish.svg" artistName="Unknown Artist" songName="Unknown Song" />
+            <PopularCard icon="/selfish.svg" artistName="Unknown Artist" songName="Unknown Song" />
+            <PopularCard icon="/selfish.svg" artistName="Unknown Artist" songName="Unknown Song" />
+            <PopularCard icon="/selfish.svg" artistName="Unknown Artist" songName="Unknown Song" />
+            <PopularCard icon="/selfish.svg" artistName="Unknown Artist" songName="Unknown Song" />
+            <PopularCard icon="/selfish.svg" artistName="Unknown Artist" songName="Unknown Song" />
+            <PopularCard icon="/selfish.svg" artistName="Unknown Artist" songName="Unknown Song" />
           </div>
-          <p className={styles.thrdTitle}>
-            The most listened to hit of the week
-          </p>
         </div>
-        <div className={styles.mostListened}>
-          <MostListened />
-          <MostListened />
+        <div>
+          <h1 className={styles.h1}>Top Charm</h1>
+          <div className={styles.artistGrid}>
+            <ArtistCard name="Messy" icon="/messy.svg" />
+            <ArtistCard name="Messy" icon="/messy.svg" />
+            <ArtistCard name="Messy" icon="/messy.svg" />
+            <ArtistCard name="Messy" icon="/messy.svg" />
+            <ArtistCard name="Messy" icon="/messy.svg" />
+            <ArtistCard name="Messy" icon="/messy.svg" />
+            <ArtistCard name="Messy" icon="/messy.svg" />
+          </div>
         </div>
-        <div className={styles.musicPlayer}>
+        <div>
+          <h1 className={styles.h1}>The most listened to hit of the week</h1>
+        </div>
+        <div className={styles.musicPlayerCards}>
+          <MusicPlayer />
+          <MusicPlayer />
+          <MusicPlayer />
+          <MusicPlayer />
+          <MusicPlayer />
+          <MusicPlayer />
+          <MusicPlayer />
           <MusicPlayer />
         </div>
       </div>
-    </>
-  );
+    </div>
+  );  
 }

@@ -1,57 +1,25 @@
-.player {
-  display: flex;
-  position: fixed;
-  width: 1303px;
-  align-items: center;
-  flex-shrink: 0;
-  border-radius: 10px;
-  background: rgba(165, 76, 255, 0.70);
-}
-
-.playerLeft {
+.musicPlayer {
   display: flex;
   flex-direction: row;
-  gap: 8px;
   align-items: center;
-  width: fill;
-  padding-left: 8px;
+  width: 98%;
+  color: white;
 }
 
-.playerCenter {
+.albumRate {
+  
+}
+
+.leftSection {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 343px;
+  justify-content: space-between;
+  width: 51%;
+  align-items: center;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
   gap: 20px;
-}
-.playerNavigation {
-  display: flex;
-  flex-direction: row;
-  width: fill;
-  padding: 6px;
-  gap: 18px;
-  align-items: center;
-}
-.rotated {
-  transform: rotate(180deg);
-}
-
-.playerTime {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  gap: 10px;
-  align-items: center;
-}
-
-.playerRight {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  align-items: center;
-  color: #FFF;
-  font-size: 120%;
-  font-weight: 400;
-  font-family: sans-serif;
-  padding-right: 8px;
 }

@@ -1,66 +1,34 @@
 .card {
-    display: flex;
-    width: 112px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-  
-  .icon {
-    height: 112px;
-    align-self: stretch;
-    aspect-ratio: 1/1;
-    border-radius: 8px;
-    background:  lightgray 50% / cover no-repeat;
-  }
+  width: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  color: white;
+  font-family: sans-serif;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-  .songName {
-    align-self: stretch;
-    color: #FFF;
-    text-align: center;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; 
-  }
-  
-  .artistName {
-    align-self: stretch;
-    color: #A8A8A8;
-    font-family: Inter;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px; 
-  }
+.image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
 
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .card {
-        width: 112px;
-        padding: 4px;
-      }
-      
-      .icon {
-        height: 104px;
-      }
-    
-    }
+.textBox {
+  padding: 8px 10px;
+}
 
-  @media (min-width: 1024px) {
-    .card {
-        width: 215px;
-        padding: 4px;
-    }
-    .icon {
-        height: 207px;
-    }
-    .songName {
-      font-size: 24px;
-      line-height: 28px;
-    }
-    .artistName {
-        font-size: 16px;
-        line-height: 20px;
-    }
-  }
+.song {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff;
+}
+
+.artist {
+  font-size: 13px;
+  font-weight: 400;
+  color: #b3b3b3;
+  margin: 2px 0 0;
+}

@@ -1,56 +1,40 @@
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 56px;
-    gap: 8px;
-    padding: 4px;
-  }
-  
-  .icon {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 32px;
-    background: lightgray 50% / cover no-repeat;
-  }
-  
-  .name {
-    color: #FFF;
-    text-align: center;
-    font-family: Inter, sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 16px;
-  }
+  width: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  color: white;
+  font-family: sans-serif;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .card {
-      width: 96px;
-      gap: 12px;
-    }
-    .icon {
-      border-radius: 24px;
-    }
-    .name {
-      font-size: 16px;
-      line-height: 20px;
-    }
-  }
+.image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
 
-  @media (min-width: 1024px) {
-    .card {
-      width: 176px;
-      gap: 16px;
-      min-width: 176px;
-      height: auto;
-    }
-    .icon {
-      border-radius: 16px;
-      background: lightgray -0.856px -1.188px / 100% 129.31% no-repeat;
-    }
-    .name {
-      font-size: 24px;
-      line-height: 28px;
-    }
-  }
+.textBox {
+  padding: 8px 10px;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.song {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff;
+}
+
+.artist {
+  font-size: 13px;
+  font-weight: 400;
+  color: #b3b3b3;
+  margin: 2px 0 0;
+}
