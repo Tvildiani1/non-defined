@@ -73,10 +73,14 @@ export default function Player ( {icon, artistName, songName} : MusicCardProps) 
         }
     };
 
+    
+
 
     const tracks = [
         '/Audio/track1.mp3',
-        '/Audio/tracks2.mp3'
+        '/Audio/tracks2.mp3',
+        '/Audio/track3.mp3',
+        '/Audio/track4.mp3'
     ]
 
 
