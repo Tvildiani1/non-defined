@@ -1,0 +1,16 @@
+.main {
+    display: flex;
+    width: 100%;
+}
+
+.rightside {
+    display: flex;
+    background-color: rgb(194, 59, 59);
+    width: 30%;
+    height: 100vh;
+}
+
+.h1 {
+    background: black;
+    color: white;
+}
