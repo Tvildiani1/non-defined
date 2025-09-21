@@ -1,0 +1,141 @@
+.container {
+    display: flex;
+    width: 1440px;
+    height: 115px;
+    padding: 0 24px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 0 0 10px 10px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 84px;
+    align-self: stretch;
+}
+.note {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+}
+.headerLibrary{
+    display: flex;
+    width: 186px;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+}
+.home {
+    display: flex;
+    width: 98px;
+    padding: 16px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    align-self: stretch;
+    border-bottom: 4px solid #A54CFF;
+
+}
+.homeImg {
+    display: flex;
+    width: 56px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+}
+.library {
+    display: flex;
+    width: 98px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.box {
+    display: flex;
+    width: 569px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+.searchImg {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+}
+
+.searchBox{
+    display: flex;
+    width: 408px;
+    height: 48px;
+    padding: 8px 16px;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), #120C19;
+}
+
+.searchInput {
+    display: flex;
+    width: 374px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    
+}
+
+
+
+.search {
+    display: flex;
+    width: 324px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.xImg {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+}
+
+.profileBox {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    gap: 12px;
+}
+
+.notificationBox {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    padding: 10.5px 11px 11.5px 11px;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    border-radius: 40px;
+    background: rgba(246, 246, 246, 0.05);
+}
