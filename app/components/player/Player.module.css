@@ -1,15 +1,16 @@
 .main {
     display: flex;
-    width: 1384px;
+    width: 100%;
+    max-width: 1384px;
     height: 104px;
     padding: 8px;
     align-items: center;
     gap: 323px;
     flex-shrink: 0;
     border-radius: 12px;
-    background: #A54CFF;
+    background: rgba(165, 76, 255, 0.7);
     position: fixed;
-    bottom: 0;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 999;
@@ -23,7 +24,7 @@
     flex-shrink: 0;
     align-self: stretch;
 }
-.icon {
+.iconArt {
     width: 88px;
     flex-shrink: 0;
     align-self: stretch;
@@ -80,9 +81,218 @@
 }
 
 
+
+
+.forwardClk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .buttonForward {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(165, 76, 255, 0.70);
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .iconForward {
+    width: 32px;
+    height: 32px;
+    
+  }
+  
+  .five {
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .prevNext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    align-self: stretch;
+  }
+
+  .prevDiv {
+    border-radius: 30px;
+    background: rgba(162, 162, 162, 0.26);
+    display: flex;
+    height: 32px;
+    padding: 7.716px 11px 8.284px 8px;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+  }
+  
+  .prevBttn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .PrevIcon {
+    width: 16px;
+    height: 16px;
+    
+  }
+
+  .playPause {
+    display: flex;
+    width: 56px;
+    height: 56px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 50%;  
+    background: #7F00FF;  
+  }
+  
+  .playBttn {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lineDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px; 
+  }
+  
+  .lineOne {
+    width: 4px;    
+    height: 20px;     
+    background: #FFF;  
+    border-radius: 2px;
+      
+  }
+  .lineTwo {
+    width: 4px;    
+    height: 20px;     
+    background: #FFF;  
+    border-radius: 2px;
+  }
+  .timeInput {
+    width: 343px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+  }
+  
+ .rangeInput {
+    color: white;
+    width: 343px;
+ }
+
+  .spanTime {
+    width: 343px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+  .volumeDiv {
+    display: flex;
+    width: 160px;
+    padding: 8px;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 10px;
+  }
+  .volumeIcon {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .volumeChange {
+    width: 72px;
+    color: #FFF;
+  }
+  
+  
+  
+
+@media (max-width: 1024px) {
+.main {
+    width: 712px;
+    padding: 2px 8px;
+    justify-content: space-between;
+    border-radius: 10px;
+    background: rgba(165, 76, 255, 0.70);
+    backdrop-filter: blur(0.5px);
+}
+
+.artDiv {
+    width: 521px;
+    justify-content: space-between;
+}
+.iconArt {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+
+
+.songName {
+    line-height: 20px;
+    font-size: 16px;
+}
+.artistName {
+    line-height: 16px;
+    font-size: 12px;
+}
+.playerDiv {
+    width: 225px;
+    justify-content: space-between;
+}
+
+.iconButton {
+    width: 164px;
+    gap: 15px;
+    align-self: stretch;
+    flex-shrink: 0;
+}
+
+
 .timeInput {
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
+}
+
+
 }

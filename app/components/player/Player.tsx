@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react'
 import styles from './Player.module.css'
-import { PlayIcon, PrevIcon, NextIcon, PauseIcon } from './icon';
+
+
 
 
 type MusicCardProps = {
@@ -20,6 +21,7 @@ export default function Player ( {icon, artistName, songName} : MusicCardProps) 
     const [duration, setDuration] = useState(0);
     const [trackIndex, setTrackIndex] = useState(0);
     const [volume, setVolume] = useState(1);
+
 
 
     useEffect(() => {
@@ -58,11 +60,6 @@ export default function Player ( {icon, artistName, songName} : MusicCardProps) 
     };
 
 
-    const handleLoadMetadata = () => {
-        if (audioRef.current) {
-            setDuration(audioRef.current.duration)
-        }
-    };
 
 
     const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -106,10 +103,28 @@ export default function Player ( {icon, artistName, songName} : MusicCardProps) 
         const seconds = Math.floor(time % 60);
         return `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
       };
+
+      const handleLoadMetadata = () => {
+        if (audioRef.current) {
+            setDuration(audioRef.current.duration)
+        }
+      }
+
+      
+      const handleForward = () => {
+        if(audioRef.current) {
+            audioRef.current.currentTime = Math.min(audioRef.current.currentTime +5, duration);
+        }
+      };
+
+
+      
+
+      
     return (
         <div className={styles.main}>
             <div className={styles.artDiv}>
-                <img src={icon} alt={artistName} className={styles.icon}/>
+                <img src={icon} alt={artistName} className={styles.iconArt}/>
                 <div className={styles.nameDiv}>
 
                     <p className={styles.songName}> {songName} </p>
@@ -119,43 +134,76 @@ export default function Player ( {icon, artistName, songName} : MusicCardProps) 
             </div>
             <div className={styles.playerDiv}>
                 <div className={styles.iconButton}>
-                    <div>
-                        <button onClick={handlePrev} className={styles.prevIcon}> <PrevIcon /> </button>
-                    </div>
-                    <div>
-                        <button onClick={handlePlayPause} > 
-                            {isPlaying ? <PauseIcon /> : <PlayIcon />}  
+                    <div className={styles.forwardClk}>
+                        <button onClick={handleForward} className={styles.buttonForward}>
+                        <img src="/icon/rotate.svg" alt="forward" className={styles.iconForward} />
+                        <span className={styles.five}> 5 </span>
                         </button>
                     </div>
-                    <div>
-                        <button onClick={handleNext}> <NextIcon /> </button>    
+                    <div className={styles.prevNext}>
+                        <div className={styles.prevDiv}>
+                            <button onClick={handlePrev} className={styles.prevBttn}>
+                                <img src='/icon/prev.svg' alt="previcon"  className={styles.prevIcon}/>
+                            </button>
+                        </div>
+                        <div className={styles.playPause}>
+                            <button onClick={handlePlayPause} className={styles.playBttn}>
+                                {isPlaying ? (
+                                <div className={styles.lineDiv}>
+                                    <img src="/icon/line1.svg" alt="pause line 1" className={styles.lineOne}/>
+                                    <img src="/icon/line2.svg" alt="pause line 2" className={styles.lineTwo}/>
+                                </div>
+                                ) : (
+                                <img src="/icon/play.svg" alt="play" />
+                                )}
+                            </button>
+                        </div>
+
+                        <div className={styles.prevDiv}>
+                            <button onClick={handleNext} className={styles.prevBttn}> 
+                                <img src='/icon/next.svg' alt="nexticon" className={styles.prevIcon} />
+                            </button>    
+                        </div>
                     </div>
+
+                    <div className={styles.prevDiv}>
+                        <button className={styles.prevBttn}> 
+                            <img src='/icon/shuffle.svg' alt="nexticon" className={styles.prevIcon} />
+                         </button>    
+                    </div>
+                    
                 </div>
-                <div>
+                <div className={styles.timeInput}>
                     <audio 
                         ref={audioRef}
                         src={tracks[trackIndex]}
                         onTimeUpdate={handleTimeUpdate}
                         onLoadedMetadata={handleLoadMetadata}
                     />
-                    <input
-                        type='range' 
-                        min={0}
-                        max={duration}
-                        value={currentTime}
-                        onChange={handleSeek}
-                        step={0.1}
-                    />
-                    <div className={styles.timeInput}>
+                    
+                    <input type="range"
+                    className={styles.rangeInput}
+                    min={0}
+                    max={duration}
+                    value={currentTime}
+                    onChange={handleSeek}
+                    step={0.1}/>
+                    
+                    <div className={styles.spanTime}>
                         <span>{formatTime(currentTime)}</span>
                         <span>{formatTime(duration)}</span>
                     </div>
+                    
+                    
                 </div>
 
 
             </div>
-            <div>
+
+            <div className={styles.volumeDiv}>
+                <img src='/icon/volume.svg' alt="volume" className={styles.volumeIcon}/>
                 <input
+                    className={styles.volumeChange}
                     type="range"
                     min={0}
                     max={1}
@@ -163,8 +211,12 @@ export default function Player ( {icon, artistName, songName} : MusicCardProps) 
                     value={volume}
                     onChange={handleVolumeChange}
                 />
+                <span>
+                    {Math.round(volume * 100)} 
+                </span>
                 
             </div>
+            
 
         </div>
     )
