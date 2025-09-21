@@ -35,7 +35,7 @@
 }
 
 .container:hover {
-    width: 250%;
+    width: 25%;
     background-color: #0f0f1a;
     transition: width 1.18s ease;
     

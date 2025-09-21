@@ -5,10 +5,17 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.main}>
-      <div>
+    <div>
+      <h1 className={styles.h1}>heading</h1>
+
+      <div className={styles.main}>
+
         <Nav />
-      </div>
+
+        <div className={styles.center}>
+            <h2>Top Artist</h2>
+          </div>
+        </div>
     </div>
   );
 }
