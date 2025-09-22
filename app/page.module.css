@@ -19,6 +19,21 @@
     width: fill;
     background: black;
     font-size: 20px;
+    padding: 40px 32px;
+    margin-left: 4.5%;
     border-radius: 24px 0 0 24px;
+}
+
+.h2 {
+    color: white;
+}
+
+.artist {
+    display: flex;
+    gap: 1%;
+    overflow-x: scroll;
+    overflow-x: hidden;
+    padding: 1%;
+    scroll-behavior: smooth;
 }
 

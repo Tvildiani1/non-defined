@@ -6,6 +6,10 @@
     gap: 8px;
     padding: 4px;
   }
+
+  .card:hover {
+    background-color: #ffffff33;
+  }
   
   .icon {
     width: 100%;

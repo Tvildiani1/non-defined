@@ -7,5 +7,6 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: #7F00FF1A;
+    background-color: #300e52;
+    overflow-x: hidden;
 }

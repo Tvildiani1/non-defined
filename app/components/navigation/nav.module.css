@@ -1,13 +1,13 @@
 .container {
+    position: absolute;
+    width: 50px;
     display: flex;
     flex-direction: column;
-    border-radius: 0 10px 10px 0;
-    align-items: flex-start;
-    width: 45px;
-    height: 100%;
-    gap: 58px;
     background-color: #000000;
+    border-radius: 0 10px 10px 0;
     padding: 24px 0 0 12px;
+    display: flex;
+    gap: 58px;
 }
 
 .logo {
@@ -23,31 +23,27 @@
 .span {
     opacity: 0;
     white-space: nowrap;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.3s ease;
 }
 
 .container:hover .span {
-    display: flex;
     opacity: 1;
-    width: 100px;
-    transition: display 2.5s ease;
-    font-size: 30px;
+    font-size: 16px;
 }
 
 .container:hover {
     width: 25%;
-    background-color: #0f0f1a;
-    transition: width 1.18s ease;
-    
-}.link {
+    transition: width 1.88s ease;
+}
+
+.link {
     display: flex;
     align-items: center;
     text-decoration: none;
-    width: 100%;
     gap: 12px;
     color: #ccc;
     cursor: pointer;
-    padding: 4px 2px;
+    padding: 8px 12px;
     border-radius: 14px;
     transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }

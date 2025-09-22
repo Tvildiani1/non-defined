@@ -1,6 +1,8 @@
 "use client";
 
+import ArtistCard from "./components/artistCard/ArtistCard";
 import Nav from "./components/navigation/nav";
+import PopularCard from "./components/popularSongCard/SongCard";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -13,9 +15,61 @@ export default function Home() {
         <Nav />
 
         <div className={styles.center}>
-            <h2>Top Artist</h2>
+
+          <div>
+            <h2 className={styles.h2}>Top Artist</h2>
+            <div className={styles.artist}>
+              <ArtistCard name="eminem" icon="/eminem.svg" />
+              <ArtistCard name="eminem" icon="/eminem.svg" />
+              <ArtistCard name="eminem" icon="/eminem.svg" />
+              <ArtistCard name="eminem" icon="/eminem.svg" />
+              <ArtistCard name="eminem" icon="/eminem.svg" />
+              <ArtistCard name="eminem" icon="/eminem.svg" />
+              <ArtistCard name="eminem" icon="/eminem.svg" />
+              <ArtistCard name="eminem" icon="/eminem.svg" />
+              <ArtistCard name="eminem" icon="/eminem.svg" />
+              <ArtistCard name="eminem" icon="/eminem.svg" />
+              <ArtistCard name="eminem" icon="/eminem.svg" />
+            </div>
+            
+            <h2 className={styles.h2}>Popular Song</h2>
+            <div className={styles.artist}>
+              <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
+              <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
+              <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
+              <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
+              <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
+              <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
+              <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
+            </div>
+
+            <h2 className={styles.h2}>Top Album</h2>
+            <div className={styles.artist}>
+              <PopularCard icon="/selfish.svg" artistName="2014 - Album" songName="Selfish" />
+              <PopularCard icon="/selfish.svg" artistName="2014 - Album" songName="Selfish" />
+              <PopularCard icon="/selfish.svg" artistName="2014 - Album" songName="Selfish" />
+              <PopularCard icon="/selfish.svg" artistName="2014 - Album" songName="Selfish" />
+              <PopularCard icon="/selfish.svg" artistName="2014 - Album" songName="Selfish" />
+              <PopularCard icon="/selfish.svg" artistName="2014 - Album" songName="Selfish" />
+              <PopularCard icon="/selfish.svg" artistName="2014 - Album" songName="Selfish" />
+            </div>
+
+            <h2 className={styles.h2}>Top Artist</h2>
+            <div className={styles.artist}>
+              <ArtistCard name="Messy" icon="/messy.svg" />
+              <ArtistCard name="Messy" icon="/messy.svg" />
+              <ArtistCard name="Messy" icon="/messy.svg" />
+              <ArtistCard name="Messy" icon="/messy.svg" />
+              <ArtistCard name="Messy" icon="/messy.svg" />
+              <ArtistCard name="Messy" icon="/messy.svg" />
+              <ArtistCard name="Messy" icon="/messy.svg" />
+              <ArtistCard name="Messy" icon="/messy.svg" />
+              <ArtistCard name="Messy" icon="/messy.svg" />
+            </div>
+
           </div>
         </div>
+      </div>
     </div>
   );
 }
