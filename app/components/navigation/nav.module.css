@@ -1,37 +1,61 @@
 .container {
     display: flex;
+    position: fixed;
+    height: 100vh;
     flex-direction: column;
-    padding: 20px 0 18px 12px;
     width: 50px;
     height: 100%;
     gap: 42px;
     background-color: #000000;
-    border-radius: 20px 0 0 20px;
+    border-radius: 0 20px 20px 0;
 }
 
 .logo {
+    padding: 30px 0 0 8px;
 }
 
 .pages {
+    display: flex;
+    flex-direction: column;
 }
 
 .span {
     color: #ffffff;
 }
 
-.container:hover .span {
+.span {
+    opacity: 0;
+}
+
+.container:hover .span{
+    opacity: 1;
 }
 
 .container:hover {
-    width: 400px;
+    width: 25%;
     transition: width 0.3s ease;
 }
 
 .link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 0 0 8px;
 }
 
 .link:hover {
+    display: flex;
+    font-size: 20px;
+    width: 200px;
+    padding: 10px;
+    gap: 10px;
+    border: 1px solid #ffffff;
 }
 
 .link:active {
+    color: purple;
+}
+
+.image {
+    margin-bottom: 19px;
 }

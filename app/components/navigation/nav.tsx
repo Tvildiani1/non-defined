@@ -11,31 +11,31 @@ export default function Sidebar() {
       </div>
       <div className={styles.pages}>
         <Link href="/" className={styles.link}>
-          <img className={styles.logo} src="/home.svg" alt="home" />
+          <img className={styles.image} src="/home.svg" alt="home" />
           <span className={styles.span}>Home</span>
         </Link>
         <Link href="/auth/library" className={styles.link}>
-          <img className={styles.logo} src="/library.svg" alt="library" />
+          <img className={styles.image} src="/library.svg" alt="library" />
           <span className={styles.span}>Library</span>
         </Link>
         <Link href="#" className={styles.link}>
-          <img className={styles.logo} src="/create.svg" alt="create" />
+          <img className={styles.image} src="/create.svg" alt="create" />
           <span className={styles.span}>Create</span>
         </Link>
         <Link href="#" className={styles.link}>
-          <img className={styles.logo} src="/addacc.svg" alt="profile" />
+          <img className={styles.image} src="/addacc.svg" alt="profile" />
           <span className={styles.span}>Profile</span>
         </Link>
         <Link href="#" className={styles.link}>
-          <img className={styles.logo} src="/history.svg" alt="history" />
+          <img className={styles.image} src="/history.svg" alt="history" />
           <span className={styles.span}>History</span>
         </Link>
         <Link href="#" className={styles.link}>
-          <img className={styles.logo} src="/setting.svg" alt="settings" />
+          <img className={styles.image} src="/setting.svg" alt="settings" />
           <span className={styles.span}>Settings</span>
         </Link>
         <Link href="#" className={styles.link}>
-          <img className={styles.logo} src="/about.svg" alt="about" />
+          <img className={styles.image} src="/about.svg" alt="about" />
           <span className={styles.span}>About</span>
         </Link>
       </div>

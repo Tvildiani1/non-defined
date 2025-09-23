@@ -1,66 +1,50 @@
 .container {
     display: flex;
     flex-direction: row;
-    width: 70%;
-    border-radius: 24px;
+    width: fill;
+    color: #ffffff;
 }
 
 .cardContainer {
     display: flex;
+    width: 50%;
     flex-direction: row;
     justify-content: space-between;
-    width: 50%;
 }
 
 .card {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    border-radius: 8px;
-    padding: 8px;
-    margin: 8px;
-    cursor: pointer;
+    gap: 8px;
 }
 
 .container:hover {
-    background-color: #ffffff33;
 }
 
 .icon {
-    display: flex;
-    width: 72px;
-    height: 72px;
 }
 
 .textContainer {
-    display: flex;
-    flex-direction: column;
-    margin-left: 12px;
-    color: #ffffff;
 }
 
 .songName {
-    font-size: 18px;
-    font-weight: 600;
-    margin: 4px 8px 0 8px;
+    margin-top: 20px;
+    margin-bottom: 0;
 }
 
 .artistName {
-    font-size: 18px;
-    color: #b3b3b3;
-    margin: 0 8px 8px 8px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #FFFFFF;
 }
 
 .musicRating {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: #ffffff;
 }
 
 .actionIcons {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    margin-left: 50%;
 }
