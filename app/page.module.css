@@ -37,3 +37,12 @@
     scroll-behavior: smooth;
 }
 
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    overflow-y: scroll;
+    overflow-y: hidden;
+    padding: 1%;
+    scroll-behavior: smooth;
+}

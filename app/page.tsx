@@ -1,6 +1,7 @@
 "use client";
 
 import ArtistCard from "./components/artistCard/ArtistCard";
+import MostListened from "./components/mostListened/MostListened";
 import Nav from "./components/navigation/nav";
 import PopularCard from "./components/popularSongCard/SongCard";
 import styles from "./page.module.css";
@@ -65,6 +66,17 @@ export default function Home() {
               <ArtistCard name="Messy" icon="/messy.svg" />
               <ArtistCard name="Messy" icon="/messy.svg" />
               <ArtistCard name="Messy" icon="/messy.svg" />
+            </div>
+
+            <h2 className={styles.h2}>The most listened to hit of the week</h2>
+            <div className={styles.cards}>
+              <MostListened icon="/roddyRich.svg" artistName="Roddy Rich" songName="The Box" />
+              <MostListened icon="/roddyRich.svg" artistName="Roddy Rich" songName="The Box" />
+              <MostListened icon="/roddyRich.svg" artistName="Roddy Rich" songName="The Box" />
+              <MostListened icon="/roddyRich.svg" artistName="Roddy Rich" songName="The Box" />
+              <MostListened icon="/roddyRich.svg" artistName="Roddy Rich" songName="The Box" />
+              <MostListened icon="/roddyRich.svg" artistName="Roddy Rich" songName="The Box" />
+              <MostListened icon="/roddyRich.svg" artistName="Roddy Rich" songName="The Box" />
             </div>
 
           </div>
