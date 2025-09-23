@@ -20,7 +20,6 @@
     background: black;
     font-size: 20px;
     padding: 40px 32px;
-    margin-left: 4.5%;
     border-radius: 24px 0 0 24px;
 }
 
@@ -45,4 +44,12 @@
     overflow-y: hidden;
     padding: 1%;
     scroll-behavior: smooth;
+}
+
+.player {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    color: #ffffff;
+    margin-left: 180px;
 }

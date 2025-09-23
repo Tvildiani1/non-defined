@@ -4,6 +4,7 @@
   width: 220px;
   color: white;
   font-family: sans-serif;
+  cursor: pointer;
 }
 
 .card:hover {

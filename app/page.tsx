@@ -79,9 +79,17 @@ export default function Home() {
               <MostListened icon="/roddyRich.svg" artistName="Roddy Rich" songName="The Box" />
             </div>
 
+            <div className={styles.player}>
+              <p>musicplayer</p>
+            </div>
+
           </div>
+          
         </div>
+
       </div>
+
     </div>
+    
   );
 }

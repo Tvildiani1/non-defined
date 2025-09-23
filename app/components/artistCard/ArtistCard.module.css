@@ -5,6 +5,7 @@
     width: 56px;
     gap: 8px;
     padding: 4px;
+    cursor: pointer;
   }
 
   .card:hover {
