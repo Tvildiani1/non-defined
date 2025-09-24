@@ -349,53 +349,198 @@
 
 @media (max-width: 1024px) {
   .main {
-    width: 521px;
+    width: 100%;
+    max-width: 712px;
+    height: 70px;
     padding: 2px 8px;
+    align-items: center;
     justify-content: space-between;
+    border-radius: 10px;
+  
   }
-
-  .artistInfo {
-    width: 180px;
-    gap: 8px;
+  /* ---------- */
+  
+  .artistIcon {
+    width: 64px;
+    height: 64px;
   }
-
+  
+  
   .songTitle {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 20px; 
+    margin: 0;
   }
-
   .artistName {
     font-size: 12px;
-    line-height: 16px;
+    line-height: 16px; 
+    margin: 0;
   }
-
+  
+  
+  /* ---------- */
   .playerSection {
     width: 312px;
-    gap: 6px;
+    gap: 6px;  
   }
-.playerControls {
-  justify-content: space-between;
-}
-  .trackControls {
-    gap: 30px;
+  
+  .playerControls {
+    justify-content: space-between;
   }
+  
+    
+  .seekIcon {
+    width: 24px;
+    height: 24px;  
+    }
+    
 
-  .playPauseButtonWrapper {
-    padding: 6px;
-    aspect-ratio: 1/1;
+  
+  .prevButtonWrapper {
+    width: 24px;
+    height: 24px;  
+    padding:  2.664px 2.004px 2.671px 2.004px;
   }
-
+  
+    
+  
+  .shuffleWrapper {
+    width: 24px;
+    height: 24px;
+    }
+  
+  
+  .audioPlayer {
+    align-items: flex-start;
+    }
+    
+    .timeSlider {
+      width: 312px;
+    }
+    
+  
+    .timeLabels {
+    width: 312px;
+    }
+  
+  
+  
+    /* --------- */
+  
   .volumeControl {
-    width: 130px;
+    display: flex;
+    width: 160px;
+    padding: 8px;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    }
+  
+  .volumeIcon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
   }
-
-  .timeSlider,
+  
+  
   .volumeSlider {
-    width: 200px;
+   display: none;
+  }
+  
+  
+  .volumeLabel {
+    display: none;
   }
 }
 
 
 /* ---------- Mobile -------------------- */
 @media (max-width: 768px) {
+  .main {
+    width: 343px;
+    padding: 8px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+  
+  }
+  /* ---------- */
+  
+  .artistIcon {
+    width: 52px;
+    height: 52px;
+  }
+  
+  
+  .songTitle {
+    font-size: 14px;
+    line-height: 18px; 
+    margin: 0;
+  }
+  .artistName {
+    font-size: 12px;
+    line-height: 16px; 
+    margin: 0;
+  }
+  
+  
+  /* ---------- */
+  .playerSection {
+    width: 104px;
+    gap: 8px;  
+  }
+  
+  .seekControl {
+    display: none;
+  }
+  
+ 
+  .prevButtonWrapper {
+    width: 24px;
+    height: 24px;  
+    padding:  8px;
+  }
+  
+    
+  
+  .shuffleWrapper {
+    display: none;
+    }
+  
+  
+  .audioPlayer {
+    display: none;
+    }
+    
+    .timeSlider {
+      display: none;
+    }
+    
+  
+    .timeLabels {
+    display: none;
+    }
+  
+  
+  
+    /* --------- */
+  
+  .volumeControl {
+    display: none;
+    }
+  
+  .volumeIcon {
+    display: none;
+  }
+  
+  
+  .volumeSlider {
+   display: none;
+  }
+  
+  
+  .volumeLabel {
+    display: none;
+  }
 }

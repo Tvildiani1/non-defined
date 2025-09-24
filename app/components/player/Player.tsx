@@ -22,6 +22,7 @@ export default function Player ( {icon, artistName, songName} : MusicCardProps) 
     const [trackIndex, setTrackIndex] = useState(0);
     const [volume, setVolume] = useState(1);
     const [isShuffle, setIsShuffle] = useState(false);
+    const [showVolume, setShowVolume] = useState(false);
 
 
 
@@ -237,8 +238,9 @@ export default function Player ( {icon, artistName, songName} : MusicCardProps) 
 
             </div>
 
-            <div className={styles.volumeControl}>
-                <img src='/icon/volume.svg' alt="volume" className={styles.volumeIcon}/>
+            <div className={styles.volumeControl}  >
+                <img src='/icon/volume.svg' alt="volume" className={styles.volumeIcon} />
+                
                 <input
                     className={styles.volumeSlider}
                     type="range"
@@ -255,12 +257,15 @@ export default function Player ( {icon, artistName, songName} : MusicCardProps) 
                         e.target.style.setProperty('--volume-percent', `${newVolume * 100}%`);
                         
                     }}
-                    style={{ '--volume-percent': `${volume * 100}%` } as React.CSSProperties}
-                />
+                    style={{ "--volume-percent": `${volume * 100}%` } as React.CSSProperties}
+                
+                /> 
 
-                <span className={styles.volumeLabel}>
-                    {Math.round(volume * 100)} 
-                </span>
+                    
+                    <span className={styles.volumeLabel}>
+                        {Math.round(volume * 100)}
+                    </span>
+                    
                 
             </div>
             
