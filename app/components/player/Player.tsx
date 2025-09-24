@@ -21,20 +21,31 @@ export default function Player ( {icon, artistName, songName} : MusicCardProps) 
     const [duration, setDuration] = useState(0);
     const [trackIndex, setTrackIndex] = useState(0);
     const [volume, setVolume] = useState(1);
+    const [isShuffle, setIsShuffle] = useState(false);
 
 
 
     useEffect(() => {
         if (audioRef.current) {
-            audioRef.current.load();
             if (isPlaying) {
                 audioRef.current.play();
+            } else {
+                audioRef.current.pause()
             }
         }
-    }, [isPlaying, trackIndex]);
+    }, [isPlaying]);
 
     useEffect(() => {
-        if (audioRef.current) {
+        if (!audioRef.current) return;
+      
+        audioRef.current.load();  
+        if (isPlaying) {
+          audioRef.current.play();
+      }
+    }, [trackIndex]);
+
+    useEffect(() => {
+        if (audioRef.current)  {
           audioRef.current.volume = volume;
         }
       }, [volume]);
@@ -82,13 +93,31 @@ export default function Player ( {icon, artistName, songName} : MusicCardProps) 
 
 
     const handlePrev = () => {
-        setTrackIndex((prev) => (prev - 1 + tracks.length) % tracks.length)
+        if(isShuffle) {
+            let prevIndex;
+            do {
+                prevIndex = Math.floor(Math.random() * tracks.length);
+            } while (prevIndex === trackIndex && tracks.length > 1);
+            setTrackIndex(prevIndex);
+        } else {
+            setTrackIndex((prev) => (prev - 1 + tracks.length) % tracks.length);
+        }
     };
+    
 
 
     const handleNext = () => {
-        setTrackIndex((prev) => (prev + 1) % tracks.length)
-    }
+        if(isShuffle) {
+            let nextIndex;
+            do {
+                nextIndex = Math.floor(Math.random() * tracks.length);
+            } while (nextIndex === trackIndex && tracks.length > 1);
+            setTrackIndex(nextIndex);
+        } else {
+            setTrackIndex((prev) => (prev + 1) % tracks.length);
+        }
+    };
+    
 
     const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newVolume = parseFloat(e.target.value);
@@ -113,9 +142,11 @@ export default function Player ( {icon, artistName, songName} : MusicCardProps) 
       
       const handleForward = () => {
         if(audioRef.current) {
-            audioRef.current.currentTime = Math.min(audioRef.current.currentTime +5, duration);
+            audioRef.current.currentTime = Math.min(audioRef.current.currentTime + 5, duration);
+            if(isPlaying) audioRef.current.play(); 
         }
-      };
+    };
+    
 
 
       
@@ -123,73 +154,79 @@ export default function Player ( {icon, artistName, songName} : MusicCardProps) 
       
     return (
         <div className={styles.main}>
-            <div className={styles.artDiv}>
-                <img src={icon} alt={artistName} className={styles.iconArt}/>
-                <div className={styles.nameDiv}>
+            <div className={styles.artistInfo}>
+                <img src={icon} alt={artistName} className={styles.artistIcon}/>
 
-                    <p className={styles.songName}> {songName} </p>
+                <div className={styles.artistDetails}>
+
+                    <p className={styles.songTitle}> {songName} </p>
                     <p className={styles.artistName}> {artistName} </p>
 
                 </div>
             </div>
-            <div className={styles.playerDiv}>
-                <div className={styles.iconButton}>
-                    <div className={styles.forwardClk}>
-                        <button onClick={handleForward} className={styles.buttonForward}>
-                        <img src="/icon/rotate.svg" alt="forward" className={styles.iconForward} />
-                        <span className={styles.five}> 5 </span>
+            <div className={styles.playerSection}>
+                <div className={styles.playerControls}>
+                    <div className={styles.seekControl}>
+                        <button onClick={handleForward} className={styles.seekButton}>
+                        <img src="/icon/rotate.svg" alt="forward" className={styles.seekIcon} />
+                        <span className={styles.seekLabel}> 5 </span>
                         </button>
                     </div>
-                    <div className={styles.prevNext}>
-                        <div className={styles.prevDiv}>
-                            <button onClick={handlePrev} className={styles.prevBttn}>
+                    <div className={styles.trackControls}>
+                        <div className={styles.prevButtonWrapper}>
+                            <button onClick={handlePrev} className={styles.prevButton}>
                                 <img src='/icon/prev.svg' alt="previcon"  className={styles.prevIcon}/>
                             </button>
                         </div>
-                        <div className={styles.playPause}>
-                            <button onClick={handlePlayPause} className={styles.playBttn}>
+                        <div className={styles.playPauseButtonWrapper}>
+                            <button onClick={handlePlayPause} className={styles.playPauseButton}>
                                 {isPlaying ? (
-                                <div className={styles.lineDiv}>
-                                    <img src="/icon/line1.svg" alt="pause line 1" className={styles.lineOne}/>
-                                    <img src="/icon/line2.svg" alt="pause line 2" className={styles.lineTwo}/>
+                                <div className={styles.pauseLines}>
+                                    <img src="/icon/line1.svg" alt="pause line 1" className={styles.pauseLineOne}/>
+                                    <img src="/icon/line2.svg" alt="pause line 2" className={styles.pauseLineTwo}/>
                                 </div>
                                 ) : (
-                                <img src="/icon/play.svg" alt="play" />
+                                <img src="/icon/play.svg" alt="play" className={styles.playIcon} />
                                 )}
                             </button>
                         </div>
 
-                        <div className={styles.prevDiv}>
-                            <button onClick={handleNext} className={styles.prevBttn}> 
+                        <div className={styles.prevButtonWrapper}>
+                            <button onClick={handleNext} className={styles.prevButton}> 
                                 <img src='/icon/next.svg' alt="nexticon" className={styles.prevIcon} />
                             </button>    
                         </div>
                     </div>
 
-                    <div className={styles.prevDiv}>
-                        <button className={styles.prevBttn}> 
-                            <img src='/icon/shuffle.svg' alt="nexticon" className={styles.prevIcon} />
+                    <div className={styles.shuffleWrapper}>
+                        <button className={styles.shuffleButton}  onClick={() => setIsShuffle(prev => !prev)}> 
+                            <img src='/icon/shuffle.svg' alt="nexticon" className={styles.shuffleIcon} />
                          </button>    
                     </div>
                     
                 </div>
-                <div className={styles.timeInput}>
+                <div className={styles.audioPlayer}>
                     <audio 
                         ref={audioRef}
                         src={tracks[trackIndex]}
                         onTimeUpdate={handleTimeUpdate}
                         onLoadedMetadata={handleLoadMetadata}
+                        onEnded={handleNext}
                     />
                     
                     <input type="range"
-                    className={styles.rangeInput}
+                    className={styles.timeSlider}
                     min={0}
                     max={duration}
                     value={currentTime}
                     onChange={handleSeek}
-                    step={0.1}/>
+                    step={0.1}
+                    style={{
+                        background: `linear-gradient(to right, #A54CFF 0%, #A54CFF ${(currentTime / duration) * 100}%, #FFFFFF ${(currentTime / duration) * 100}%, #FFFFFF 100%)`
+                      }}
+                      />
                     
-                    <div className={styles.spanTime}>
+                    <div className={styles.timeLabels}>
                         <span>{formatTime(currentTime)}</span>
                         <span>{formatTime(duration)}</span>
                     </div>
@@ -200,18 +237,28 @@ export default function Player ( {icon, artistName, songName} : MusicCardProps) 
 
             </div>
 
-            <div className={styles.volumeDiv}>
+            <div className={styles.volumeControl}>
                 <img src='/icon/volume.svg' alt="volume" className={styles.volumeIcon}/>
                 <input
-                    className={styles.volumeChange}
+                    className={styles.volumeSlider}
                     type="range"
                     min={0}
                     max={1}
                     step={0.01}
                     value={volume}
-                    onChange={handleVolumeChange}
+                    onChange={(e) => {
+                        const newVolume = parseFloat(e.target.value);
+                        setVolume(newVolume);
+                        if (audioRef.current) audioRef.current.volume = newVolume;
+
+                    
+                        e.target.style.setProperty('--volume-percent', `${newVolume * 100}%`);
+                        
+                    }}
+                    style={{ '--volume-percent': `${volume * 100}%` } as React.CSSProperties}
                 />
-                <span>
+
+                <span className={styles.volumeLabel}>
                     {Math.round(volume * 100)} 
                 </span>
                 

@@ -1,298 +1,401 @@
 .main {
-    display: flex;
-    width: 100%;
-    max-width: 1384px;
-    height: 104px;
-    padding: 8px;
-    align-items: center;
-    gap: 323px;
-    flex-shrink: 0;
-    border-radius: 12px;
-    background: rgba(165, 76, 255, 0.7);
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 999;
+  display: flex;
+  width: 100%;
+  max-width: 1384px;
+  height: 104px;
+  padding: 12px;
+  align-items: center;
+  gap: 323px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: rgba(165, 76, 255, 0.70);
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  
+}
+/* ---------- */
+.artistInfo{
+  display: flex;
+  width: 219px;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  align-self: stretch;
 }
 
-.artDiv {
-    display: flex;
-    width: 219px;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-    align-self: stretch;
-}
-.iconArt {
-    width: 88px;
-    flex-shrink: 0;
-    align-self: stretch;
-    aspect-ratio: 1/1;
-    border-radius: 8px;
-    background:  lightgray 50% / cover no-repeat;
-}
-.nameDiv {
-    display: flex;
-    width: 101px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
-    flex-shrink: 0;
+.artistIcon {
+  flex-shrink: 0;
+  align-self: stretch;
+  aspect-ratio: 1/1;
+  border-radius: 8px;
+  background:  lightgray 50% / cover no-repeat;
 }
 
-.songName {
-    align-self: stretch;
-    color: #FFF;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; 
+.artistDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.songTitle {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; 
+  margin: 0;
 }
 .artistName {
-    width: 101px;
-    color: #D2CECE;
-    text-align: center;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; 
-}
-
-.playerDiv {
-    display: flex;
-    width: 343px;
-    height: 88px;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    flex-shrink: 0;
-
-}
-
-.iconButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 48px;
-    align-self: stretch;
+  color: #D2CECE;
+  text-align: left;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; 
+  margin: 0;
 }
 
 
+/* ---------- */
+.playerSection {
+  display: flex;
+  width: 343px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+
+}
+
+.playerControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  align-self: stretch;
+}
 
 
-.forwardClk {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .buttonForward {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 32px;
-    height: 32px;
-    background: rgba(165, 76, 255, 0.70);
-    border: none;
-    border-radius: 50%;
-    padding: 0;
-    cursor: pointer;
-  }
-  
-  .iconForward {
-    width: 32px;
-    height: 32px;
+.seekControl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
     
   }
   
-  .five {
-    position: absolute;
-    color: white;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: normal;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
+.seekButton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
   }
 
-  .prevNext {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 48px;
-    align-self: stretch;
+.seekButton:hover {
+  background: rgba(0, 0, 0, 0.10);
+}
+  
+.seekIcon {
+  width: 32px;
+  height: 32px;  
+  }
+  
+.seekLabel {
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
   }
 
-  .prevDiv {
-    border-radius: 30px;
-    background: rgba(162, 162, 162, 0.26);
-    display: flex;
-    height: 32px;
-    padding: 7.716px 11px 8.284px 8px;
-    justify-content: center;
-    align-items: center;
-    aspect-ratio: 1/1;
-  }
-  
-  .prevBttn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background: transparent;
-    padding: 0;
-    cursor: pointer;
-  }
-  
-  .PrevIcon {
-    width: 16px;
-    height: 16px;
-    
+.trackControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  align-self: stretch;
   }
 
-  .playPause {
-    display: flex;
-    width: 56px;
-    height: 56px;
-    padding: 8px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    border-radius: 50%;  
-    background: #7F00FF;  
+.prevButtonWrapper {
+  border-radius: 30px;
+  display: flex;
+  padding: 7.716px 11px 8.284px 8px;
+  background: rgba(162, 162, 162, 0.26);
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
   }
   
-  .playBttn {
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.prevButton {
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  align-items: center;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 8px;
+  }
+
+.prevButton:hover {
+  background: rgba(0, 0, 0, 0.10);
+}
+  
+.PrevIcon {
+  width: 16px;
+  height: 16px;   
+  }
+
+.playPauseButtonWrapper {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  border-radius: 96px;  
+  background: linear-gradient(0deg, rgba(255, 250, 250, 0.15) 0%, rgba(255, 250, 250, 0.15) 100%), #7F00FF;
+  transition: background 0.2s ease;
+  }
+
+.playPauseButtonWrapper:hover {
+  background: #7F00FF;
+  
+}
+  
+.playPauseButton {
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
   
-  .lineDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px; 
+.pauseLines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px; 
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1/1;
   }
   
-  .lineOne {
-    width: 4px;    
-    height: 20px;     
-    background: #FFF;  
-    border-radius: 2px;
+.pauseLineOne {
+  width: 4px;    
+  height: 20px;     
+  background: #FFF;  
+  border-radius: 2px;
       
   }
-  .lineTwo {
-    width: 4px;    
-    height: 20px;     
-    background: #FFF;  
-    border-radius: 2px;
+.pauseLineTwo {
+  width: 4px;    
+  height: 20px;     
+  background: #FFF;  
+  border-radius: 2px;
   }
-  .timeInput {
-    width: 343px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px; 
-  }
-  
- .rangeInput {
-    color: white;
-    width: 343px;
- }
 
-  .spanTime {
+.playIcon {
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1/1;
+  }
+
+.shuffleWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+.shuffleButton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  padding: 0px;
+  cursor: pointer;
+  background: transparent;
+  }
+
+
+
+.shuffleIcon {
+  width: 24px;
+  height: 24px;
+  }
+
+.audioPlayer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; 
+  }
+  
+  .timeSlider {
+    -webkit-appearance: none;
     width: 343px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-  }
-  .volumeDiv {
-    display: flex;
-    width: 160px;
-    padding: 8px;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-    border-radius: 10px;
-  }
-  .volumeIcon {
-    display: flex;
-    width: 24px;
-    height: 24px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-  }
-  .volumeChange {
-    width: 72px;
-    color: #FFF;
+    height: 6px; 
+    border-radius: 3px;
+    background: #FFFFFF;
+    outline: none;
   }
   
+
+.timeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;  
+  border-radius: 50%;
+  background: #7F00FF;
+  cursor: pointer;
+  position: relative;
+  }
   
+.timeSlider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
   
+  }
+  
+  .timeLabels {
+  width: 343px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color:  white;
+  }
+
+
+
+  /* --------- */
+
+.volumeControl {
+  display: flex;
+  width: 160px;
+  padding: 8px;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  }
+
+.volumeIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+
+.volumeSlider {
+  -webkit-appearance: none;
+  width: 88px;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right, #FFFFFF 0%, #FFFFFF var(--volume-percent, 0%), #A8A8A8 var(--volume-percent, 0%), #A8A8A8 100%);
+  outline: none;
+}
+
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0; 
+  height: 0;
+  background: transparent;
+  cursor: pointer; 
+  border: none;
+  margin-top: 0; 
+}
+
+
+.volumeSlider::-moz-range-thumb {
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.volumeLabel {
+  color: #FFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+  
+  /*-------------Tablet------------------------*/
 
 @media (max-width: 1024px) {
-.main {
-    width: 712px;
+  .main {
+    width: 521px;
     padding: 2px 8px;
     justify-content: space-between;
-    border-radius: 10px;
-    background: rgba(165, 76, 255, 0.70);
-    backdrop-filter: blur(0.5px);
-}
+  }
 
-.artDiv {
-    width: 521px;
-    justify-content: space-between;
-}
-.iconArt {
-    display: flex;
-    align-items: center;
+  .artistInfo {
+    width: 180px;
     gap: 8px;
+  }
 
-}
-
-
-
-.songName {
-    line-height: 20px;
+  .songTitle {
     font-size: 16px;
-}
-.artistName {
-    line-height: 16px;
+    line-height: 20px;
+  }
+
+  .artistName {
     font-size: 12px;
+    line-height: 16px;
+  }
+
+  .playerSection {
+    width: 312px;
+    gap: 6px;
+  }
+.playerControls {
+  justify-content: space-between;
 }
-.playerDiv {
-    width: 225px;
-    justify-content: space-between;
+  .trackControls {
+    gap: 30px;
+  }
+
+  .playPauseButtonWrapper {
+    padding: 6px;
+    aspect-ratio: 1/1;
+  }
+
+  .volumeControl {
+    width: 130px;
+  }
+
+  .timeSlider,
+  .volumeSlider {
+    width: 200px;
+  }
 }
 
-.iconButton {
-    width: 164px;
-    gap: 15px;
-    align-self: stretch;
-    flex-shrink: 0;
-}
 
-
-.timeInput {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
-}
-
-
+/* ---------- Mobile -------------------- */
+@media (max-width: 768px) {
 }
