@@ -7,7 +7,8 @@
     height: 100%;
     gap: 42px;
     background-color: #000000;
-    border-radius: 0 20px 20px 0;
+    margin-top: 10px;
+    border-radius: 0 18px 18px 0;
 }
 
 .logo {

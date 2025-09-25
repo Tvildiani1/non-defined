@@ -1,21 +1,26 @@
 .container {
     display: flex;
+    align-items: center;
     flex-direction: row;
-    width: fill;
+    padding-left: 4%;
+    width: 100%;
     color: #ffffff;
+    cursor: pointer;
+}
+
+.container:hover {
+    background-color: #6d6d6d74;
+    border-radius: 18px;
 }
 
 .cardContainer {
     display: flex;
-    width: 50%;
-    flex-direction: row;
     justify-content: space-between;
+    width: 44%;
 }
 
 .card {
     display: flex;
-    flex-direction: row;
-    gap: 8px;
 }
 
 .container:hover {
@@ -35,16 +40,16 @@
 .artistName {
     margin-top: 0;
     margin-bottom: 20px;
-    color: #FFFFFF;
+    color: #6d6d6d;
 }
 
 .musicRating {
+    display: flex;
 }
 
 .actionIcons {
     display: flex;
-    flex-direction: row;
-    width: 24px;
-    height: 24px;
-    margin-left: 50%;
+    margin-left: 47%;
+    width: 30px;
+    height: 30px;
 }

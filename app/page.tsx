@@ -1,6 +1,7 @@
 "use client";
 
 import ArtistCard from "./components/artistCard/ArtistCard";
+import Header from "./components/header/header";
 import MostListened from "./components/mostListened/MostListened";
 import Nav from "./components/navigation/nav";
 import PopularCard from "./components/popularSongCard/SongCard";
@@ -9,7 +10,7 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <div>
-      <h1 className={styles.h1}>heading</h1>
+      <Header />
 
       <div className={styles.main}>
 
@@ -17,16 +18,13 @@ export default function Home() {
 
         <div className={styles.center}>
 
-          <div className={styles.player}>
+          {/* <div className={styles.player}>
             <p>musicplayer</p>
-          </div>
+          </div> */}
 
-          <div>
+          <div className={styles.artistCards}>
             <h2 className={styles.h2}>Top Artist</h2>
             <div className={styles.artist}>
-              <ArtistCard name="eminem" icon="/eminem.svg" />
-              <ArtistCard name="eminem" icon="/eminem.svg" />
-              <ArtistCard name="eminem" icon="/eminem.svg" />
               <ArtistCard name="eminem" icon="/eminem.svg" />
               <ArtistCard name="eminem" icon="/eminem.svg" />
               <ArtistCard name="eminem" icon="/eminem.svg" />
@@ -45,7 +43,6 @@ export default function Home() {
               <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
               <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
               <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
-              <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
             </div>
 
             <h2 className={styles.h2}>Top Album</h2>
@@ -56,12 +53,10 @@ export default function Home() {
               <PopularCard icon="/selfish.svg" artistName="2014 - Album" songName="Selfish" />
               <PopularCard icon="/selfish.svg" artistName="2014 - Album" songName="Selfish" />
               <PopularCard icon="/selfish.svg" artistName="2014 - Album" songName="Selfish" />
-              <PopularCard icon="/selfish.svg" artistName="2014 - Album" songName="Selfish" />
             </div>
 
             <h2 className={styles.h2}>Top Artist</h2>
             <div className={styles.artist}>
-              <ArtistCard name="Messy" icon="/messy.svg" />
               <ArtistCard name="Messy" icon="/messy.svg" />
               <ArtistCard name="Messy" icon="/messy.svg" />
               <ArtistCard name="Messy" icon="/messy.svg" />
