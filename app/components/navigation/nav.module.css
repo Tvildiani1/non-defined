@@ -1,63 +1,62 @@
 .container {
     display: flex;
+    position: fixed;
+    height: 100vh;
     flex-direction: column;
-    border-radius: 0 10px 10px 0;
-    align-items: flex-start;
-    width: 45px;
+    width: 50px;
     height: 100%;
-    gap: 58px;
+    gap: 42px;
     background-color: #000000;
-    padding: 24px 0 0 12px;
+    margin-top: 10px;
+    border-radius: 0 18px 18px 0;
 }
 
 .logo {
-    cursor: pointer;
+    padding: 30px 0 0 8px;
 }
 
 .pages {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+}
+
+.span {
+    color: #ffffff;
 }
 
 .span {
     opacity: 0;
-    white-space: nowrap;
-    transition: opacity 0.5s ease;
 }
 
-.container:hover .span {
-    display: flex;
+.container:hover .span{
     opacity: 1;
-    width: 100px;
-    transition: display 2.5s ease;
-    font-size: 30px;
 }
 
 .container:hover {
-    width: 250%;
-    background-color: #0f0f1a;
-    transition: width 1.18s ease;
-    
-}.link {
+    width: 25%;
+    transition: width 0.3s ease;
+}
+
+.link {
     display: flex;
     align-items: center;
     text-decoration: none;
-    width: 100%;
-    gap: 12px;
-    color: #ccc;
-    cursor: pointer;
-    padding: 4px 2px;
-    border-radius: 14px;
-    transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    padding: 10px 0 0 8px;
 }
 
 .link:hover {
-    background: #ffffff0d;
-    box-shadow: 2px 4px 12px #00000066;
+    display: flex;
+    font-size: 20px;
+    width: 200px;
+    padding: 10px;
+    gap: 10px;
+    border: 1px solid #ffffff;
 }
 
 .link:active {
-    color: #7F00FF;
-    background: #ffffff0d;
+    color: purple;
+}
+
+.image {
+    margin-bottom: 19px;
 }
