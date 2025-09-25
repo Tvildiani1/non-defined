@@ -356,10 +356,17 @@
     align-items: center;
     justify-content: space-between;
     border-radius: 10px;
-  
+    gap: 10px;
+    
   }
   /* ---------- */
-  
+  .artistInfo {
+    flex: 1;
+    min-width: 120px;
+    max-width: 173px;
+    gap: 8px;
+    overflow: hidden;
+  }
   .artistIcon {
     width: 64px;
     height: 64px;
@@ -370,30 +377,45 @@
     font-size: 16px;
     line-height: 20px; 
     margin: 0;
+    white-space: nowrap;
   }
   .artistName {
     font-size: 12px;
     line-height: 16px; 
     margin: 0;
+    white-space: nowrap;
   }
   
   
   /* ---------- */
   .playerSection {
-    width: 312px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 312px;
     gap: 6px;  
   }
   
   .playerControls {
-    justify-content: space-between;
+    gap: 30px;
+   
   }
-  
-    
+  .seekButton {
+    padding: 2px;
+  }
+
+  .seekLabel {
+    font-size: 12px;
+  }
+
   .seekIcon {
-    width: 24px;
-    height: 24px;  
+    width: 32px;
+    height: 32px;  
     }
     
+
+  .trackControls {
+    gap: 15px;
+  }
 
   
   .prevButtonWrapper {
@@ -401,46 +423,66 @@
     height: 24px;  
     padding:  2.664px 2.004px 2.671px 2.004px;
   }
-  
-    
-  
-  .shuffleWrapper {
+  .playPauseButtonWrapper {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+  }
+
+  .playIcon {
     width: 24px;
     height: 24px;
-    }
+  }
+
+  .pauseLines {
+    width: 24px;
+    height: 24px;
+  }
+
+  .shuffleButton {
+    padding: 2px;
+  }
+    
+  .shuffleIcon {
+    width: 24px;
+    height: 24px;
+  }
   
   
   .audioPlayer {
-    align-items: flex-start;
-    }
+    max-width: 312px;
+    gap: 8px;
+  }
     
-    .timeSlider {
-      width: 312px;
-    }
-    
+  .timeSlider {
+    height: 5px;
+  }
   
-    .timeLabels {
-    width: 312px;
-    }
+  .timeSlider::-webkit-slider-thumb,
+  .timeSlider::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+  }
+
+  
+  .timeLabels {
+    font-size: 11px;
+  }
+  
   
   
   
     /* --------- */
   
   .volumeControl {
-    display: flex;
-    width: 160px;
-    padding: 8px;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-    border-radius: 10px;
+    width: auto;
+    gap: 0;
+    justify-content: flex-end;  
     }
   
   .volumeIcon {
     width: 24px;
     height: 24px;
-    flex-shrink: 0;
   }
   
   
@@ -458,89 +500,93 @@
 /* ---------- Mobile -------------------- */
 @media (max-width: 768px) {
   .main {
-    width: 343px;
-    padding: 8px;
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 343px;  
+    height: 64px;      
+    padding: 8px;
     border-radius: 12px;
-  
+    gap: 0;
   }
-  /* ---------- */
-  
+
+  /* ----------- Artist Info ----------- */
+  .artistInfo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+    overflow: hidden;
+  }
   .artistIcon {
     width: 52px;
     height: 52px;
   }
-  
-  
   .songTitle {
     font-size: 14px;
-    line-height: 18px; 
+    line-height: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin: 0;
   }
   .artistName {
     font-size: 12px;
-    line-height: 16px; 
+    line-height: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin: 0;
   }
-  
-  
-  /* ---------- */
+
+  /* ----------- Player Section ----------- */
   .playerSection {
-    width: 104px;
-    gap: 8px;  
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
   }
-  
-  .seekControl {
-    display: none;
-  }
-  
- 
-  .prevButtonWrapper {
-    width: 24px;
-    height: 24px;  
-    padding:  8px;
-  }
-  
-    
-  
+
+  .seekControl,
+  .audioPlayer,
+  .timeLabels,
+  .timeSlider,
   .shuffleWrapper {
-    display: none;
-    }
-  
-  
-  .audioPlayer {
-    display: none;
-    }
-    
-    .timeSlider {
-      display: none;
-    }
-    
-  
-    .timeLabels {
-    display: none;
-    }
-  
-  
-  
-    /* --------- */
-  
+    display: none;   
+  }
+
+  .prevButtonWrapper,
+  .nextButtonWrapper,
+  .playPauseButtonWrapper {
+    width: 36px;
+    height: 36px;
+  }
+
+  .playIcon,
+  .pauseLines {
+    width: 24px;
+    height: 24px;
+  }
+
+
   .volumeControl {
-    display: none;
-    }
-  
-  .volumeIcon {
-    display: none;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;  
+    align-items: center;
+    width: auto;
+    gap: 0;
   }
-  
-  
-  .volumeSlider {
-   display: none;
-  }
-  
-  
+
+  .volumeSlider,
   .volumeLabel {
-    display: none;
+    display: none;  
+  }
+
+  .volumeIcon {
+    width: 24px;
+    height: 24px;
   }
 }
