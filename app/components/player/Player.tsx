@@ -120,13 +120,7 @@ export default function Player ( {icon, artistName, songName} : MusicCardProps) 
     };
     
 
-    const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const newVolume = parseFloat(e.target.value);
-        setVolume(newVolume);
-        if (audioRef.current) {
-          audioRef.current.volume = newVolume;
-        }
-      };
+    
 
       const formatTime = (time: number): string => {
         const minutes = Math.floor(time / 60);

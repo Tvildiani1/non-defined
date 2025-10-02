@@ -1,23 +1,26 @@
 .main {
   display: flex;
-  width: 100%;
-  max-width: 1384px;
-  height: 104px;
-  padding: 12px;
   align-items: center;
-  gap: 323px;
-  flex-shrink: 0;
+  justify-content: space-between;
+  width: 94%;
+  max-width: 1384px;
+  height: fit-content;
+  margin: 0px 12px;
+  padding: 12px;
+  /* gap: 323px; */
+  /* flex-shrink: 0; */
   border-radius: 10px;
   background: rgba(165, 76, 255, 0.70);
   position: fixed;
   bottom: 20px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50.8%);
   z-index: 999;
-  
+
 }
+
 /* ---------- */
-.artistInfo{
+.artistInfo {
   display: flex;
   width: 219px;
   align-items: center;
@@ -31,7 +34,7 @@
   align-self: stretch;
   aspect-ratio: 1/1;
   border-radius: 8px;
-  background:  lightgray 50% / cover no-repeat;
+  background: lightgray 50% / cover no-repeat;
 }
 
 .artistDetails {
@@ -48,9 +51,10 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 22px; 
+  line-height: 22px;
   margin: 0;
 }
+
 .artistName {
   color: #D2CECE;
   text-align: left;
@@ -58,7 +62,7 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; 
+  line-height: 18px;
   margin: 0;
 }
 
@@ -87,9 +91,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-    
-  }
-  
+
+}
+
 .seekButton {
   position: relative;
   display: flex;
@@ -100,17 +104,17 @@
   padding: 0;
   cursor: pointer;
   background: transparent;
-  }
+}
 
 .seekButton:hover {
   background: rgba(0, 0, 0, 0.10);
 }
-  
+
 .seekIcon {
   width: 32px;
-  height: 32px;  
-  }
-  
+  height: 32px;
+}
+
 .seekLabel {
   position: absolute;
   color: white;
@@ -121,7 +125,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  }
+}
 
 .trackControls {
   display: flex;
@@ -129,7 +133,7 @@
   align-items: center;
   gap: 15px;
   align-self: stretch;
-  }
+}
 
 .prevButtonWrapper {
   border-radius: 30px;
@@ -139,8 +143,8 @@
   justify-content: center;
   align-items: center;
   aspect-ratio: 1/1;
-  }
-  
+}
+
 .prevButton {
   display: flex;
   justify-content: center;
@@ -151,16 +155,16 @@
   cursor: pointer;
   border-radius: 50%;
   padding: 8px;
-  }
+}
 
 .prevButton:hover {
   background: rgba(0, 0, 0, 0.10);
 }
-  
+
 .PrevIcon {
   width: 16px;
-  height: 16px;   
-  }
+  height: 16px;
+}
 
 .playPauseButtonWrapper {
   display: flex;
@@ -169,16 +173,16 @@
   align-items: center;
   flex-shrink: 0;
   aspect-ratio: 1/1;
-  border-radius: 96px;  
+  border-radius: 96px;
   background: linear-gradient(0deg, rgba(255, 250, 250, 0.15) 0%, rgba(255, 250, 250, 0.15) 100%), #7F00FF;
   transition: background 0.2s ease;
-  }
+}
 
 .playPauseButtonWrapper:hover {
   background: #7F00FF;
-  
+
 }
-  
+
 .playPauseButton {
   flex-shrink: 0;
   border: none;
@@ -187,43 +191,44 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  }
-  
+}
+
 .pauseLines {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 6px; 
+  gap: 6px;
   width: 40px;
   height: 40px;
   aspect-ratio: 1/1;
-  }
-  
+}
+
 .pauseLineOne {
-  width: 4px;    
-  height: 20px;     
-  background: #FFF;  
+  width: 4px;
+  height: 20px;
+  background: #FFF;
   border-radius: 2px;
-      
-  }
+
+}
+
 .pauseLineTwo {
-  width: 4px;    
-  height: 20px;     
-  background: #FFF;  
+  width: 4px;
+  height: 20px;
+  background: #FFF;
   border-radius: 2px;
-  }
+}
 
 .playIcon {
   width: 40px;
   height: 40px;
   aspect-ratio: 1/1;
-  }
+}
 
 .shuffleWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  }
+}
 
 .shuffleButton {
   position: relative;
@@ -235,61 +240,61 @@
   padding: 0px;
   cursor: pointer;
   background: transparent;
-  }
+}
 
 
 
 .shuffleIcon {
   width: 24px;
   height: 24px;
-  }
+}
 
 .audioPlayer {
   display: flex;
   flex-direction: column;
-  gap: 12px; 
-  }
-  
-  .timeSlider {
-    -webkit-appearance: none;
-    width: 343px;
-    height: 6px; 
-    border-radius: 3px;
-    background: #FFFFFF;
-    outline: none;
-  }
-  
+  gap: 12px;
+}
+
+.timeSlider {
+  -webkit-appearance: none;
+  width: 343px;
+  height: 6px;
+  border-radius: 3px;
+  background: #FFFFFF;
+  outline: none;
+}
+
 
 .timeSlider::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 12px;
-  height: 12px;  
+  height: 12px;
   border-radius: 50%;
   background: #7F00FF;
   cursor: pointer;
   position: relative;
-  }
-  
+}
+
 .timeSlider::-moz-range-thumb {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  
-  }
-  
-  .timeLabels {
+
+}
+
+.timeLabels {
   width: 343px;
   display: flex;
   justify-content: space-between;
   font-size: 12px;
-  color:  white;
-  }
+  color: white;
+}
 
 
 
-  /* --------- */
+/* --------- */
 
 .volumeControl {
   display: flex;
@@ -299,7 +304,7 @@
   gap: 8px;
   flex-shrink: 0;
   border-radius: 10px;
-  }
+}
 
 .volumeIcon {
   width: 24px;
@@ -319,12 +324,12 @@
 
 .volumeSlider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 0; 
+  width: 0;
   height: 0;
   background: transparent;
-  cursor: pointer; 
+  cursor: pointer;
   border: none;
-  margin-top: 0; 
+  margin-top: 0;
 }
 
 
@@ -344,21 +349,24 @@
   font-weight: 500;
   line-height: normal;
 }
-  
-  /*-------------Tablet------------------------*/
+
+/*-------------Tablet------------------------*/
 
 @media (max-width: 1024px) {
   .main {
-    width: 100%;
+    width: 94%;
     max-width: 712px;
     height: 70px;
-    padding: 2px 8px;
+    padding: 8px 16px;
     align-items: center;
     justify-content: space-between;
-    border-radius: 10px;
-    gap: 10px;
-    
+    border-radius: 16px;
+    left: 50%;
+    transform: translateX(-51.5%);
+    /* gap: 10px; */
+
   }
+
   /* ---------- */
   .artistInfo {
     flex: 1;
@@ -367,38 +375,41 @@
     gap: 8px;
     overflow: hidden;
   }
+
   .artistIcon {
     width: 64px;
     height: 64px;
   }
-  
-  
+
+
   .songTitle {
     font-size: 16px;
-    line-height: 20px; 
+    line-height: 20px;
     margin: 0;
     white-space: nowrap;
   }
+
   .artistName {
     font-size: 12px;
-    line-height: 16px; 
+    line-height: 16px;
     margin: 0;
     white-space: nowrap;
   }
-  
-  
+
+
   /* ---------- */
   .playerSection {
     flex: 1;
     min-width: 200px;
     max-width: 312px;
-    gap: 6px;  
+    gap: 6px;
   }
-  
+
   .playerControls {
     gap: 30px;
-   
+
   }
+
   .seekButton {
     padding: 2px;
   }
@@ -409,20 +420,21 @@
 
   .seekIcon {
     width: 32px;
-    height: 32px;  
-    }
-    
+    height: 32px;
+  }
+
 
   .trackControls {
     gap: 15px;
   }
 
-  
+
   .prevButtonWrapper {
     width: 24px;
-    height: 24px;  
-    padding:  2.664px 2.004px 2.671px 2.004px;
+    height: 24px;
+    padding: 2.664px 2.004px 2.671px 2.004px;
   }
+
   .playPauseButtonWrapper {
     width: 48px;
     height: 48px;
@@ -442,43 +454,43 @@
   .shuffleButton {
     padding: 2px;
   }
-    
+
   .shuffleIcon {
     width: 24px;
     height: 24px;
   }
-  
-  
+
+
   .audioPlayer {
     max-width: 312px;
     gap: 8px;
   }
-    
+
   .timeSlider {
     height: 5px;
   }
-  
+
   .timeSlider::-webkit-slider-thumb,
   .timeSlider::-moz-range-thumb {
     width: 10px;
     height: 10px;
   }
 
-  
+
   .timeLabels {
     font-size: 11px;
   }
-  
-  
-  
-  
-    /* --------- */
+
+
+
+
+  /* --------- */
   
   .volumeControl {
     width: auto;
     gap: 0;
-    justify-content: flex-end;  
-    }
+    justify-content: flex-end;
+  }
   
   .volumeIcon {
     width: 24px;
@@ -487,7 +499,7 @@
   
   
   .volumeSlider {
-   display: none;
+    display: none;
   }
   
   
@@ -498,18 +510,22 @@
 
 
 /* ---------- Mobile -------------------- */
-@media (max-width: 768px) {
+@media (max-width: 787px) {
   .main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 343px;  
-    height: 64px;      
+    width: 82%;
+    height: fit-content;
     padding: 8px;
     border-radius: 12px;
-    gap: 0;
+    left: 50%;
+    transform: translateX(-52%);
   }
-
+  
+  .volumeControl {
+    display: none;
+  }
   /* ----------- Artist Info ----------- */
   .artistInfo {
     flex: 1;
@@ -519,10 +535,12 @@
     min-width: 0;
     overflow: hidden;
   }
+
   .artistIcon {
     width: 52px;
     height: 52px;
   }
+
   .songTitle {
     font-size: 14px;
     line-height: 18px;
@@ -531,6 +549,7 @@
     text-overflow: ellipsis;
     margin: 0;
   }
+
   .artistName {
     font-size: 12px;
     line-height: 16px;
@@ -554,7 +573,7 @@
   .timeLabels,
   .timeSlider,
   .shuffleWrapper {
-    display: none;   
+    display: none;
   }
 
   .prevButtonWrapper,
@@ -571,18 +590,18 @@
   }
 
 
-  .volumeControl {
+  /* .volumeControl {
     flex: 1;
     display: flex;
-    justify-content: flex-end;  
+    justify-content: flex-end;
     align-items: center;
     width: auto;
     gap: 0;
-  }
+  } */
 
   .volumeSlider,
   .volumeLabel {
-    display: none;  
+    display: none;
   }
 
   .volumeIcon {
