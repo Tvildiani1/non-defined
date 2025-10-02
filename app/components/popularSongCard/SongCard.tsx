@@ -1,5 +1,3 @@
-'use client'
-
 import styles from './SongCard.module.css'
 
 type PopularSongProps = {

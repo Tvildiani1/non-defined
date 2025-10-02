@@ -1,18 +1,22 @@
+.header {
+}
+
 .main {
     display: flex;
-    width: 100%;
-    gap: 4px;
+    margin-top: 5px;
 }
 
 .center{
-    display: flex;
-    width: fill;
-    background: black;
+    display: block;
+    width: 100%;
+    background: #130C19;
     font-size: 20px;
-    padding: 20px 42px;
-    border-radius: 24px 0 0 24px;
-    margin-top: 8px;
-    margin-left: 60px;
+    padding: 20px 22px;
+    padding-right: 0;
+    border-radius: 18px 0 0 18px;
+    margin-top: 1px;
+    margin-left: 58px;
+    margin-right: 0;
 }
 
 .artistCards {
@@ -35,6 +39,7 @@
 }
 
 .h2 {
+    font-size: 40px;
     color: white;
 }
 
@@ -47,8 +52,43 @@
     color: #ffffff;
 }
 
+.album {
+    display: flex;
+    flex-direction: row;
+}
+
 .cards {
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .h2 {
+      font-size: 20px;
+    }
+}
+
+@media (min-width: 340px) and (max-width: 767px) {
+
+    .h2 {
+      font-size: 21px;
+    }
+
+    .album {
+        display: flex;
+        flex-direction: row;
+        width: 220px;
+        gap: 8px;
+    }
+
+    .album > * {
+        flex: 0 0 calc(50% - 16px);
+        box-sizing: border-box;
+        text-align: center;
+        font-weight: bold;
+        padding: 8px;
+        border-radius: 6px;
+    }
 }

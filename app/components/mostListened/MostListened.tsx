@@ -1,25 +1,12 @@
-'use client'
-
+import MusicCard from '../musicCard/MusicCard';
 import styles from './MostListened.module.css'
 
-type PopularSongProps = {
-    icon : string;
-    artistName : string;
-    songName : string;
-}
-
-export default function MostListened ({icon, artistName, songName} : PopularSongProps) {
+export default function MostListened () {
 
     return (
         <div className={styles.container}>
             <div className={styles.cardContainer}>
-                <div className={styles.card}>
-                    <img src={icon} alt={artistName} className={styles.icon}/>
-                    <div className={styles.textContainer}>
-                        <p className={styles.songName}> {songName} </p>
-                        <p className={styles.artistName}> {artistName} </p>
-                    </div>
-                </div>
+                <MusicCard icon="/roddyRich.svg" artistName="Roddy Rich" songName="The Box" />
                 <p className={styles.musicRating}>
                     3.24
                 </p>

@@ -1,5 +1,3 @@
-'use client'
-
 import styles from "./header.module.css"
 
 export default function Header() {
@@ -12,14 +10,14 @@ export default function Header() {
             <div className={styles.hud}>
 
                 <div className={styles.searchBar}>
-                    <div className={styles.searchIcon}><img src="search.svg" alt="Search" /></div>
+                    <div className={styles.searchIcon}><img src="/search.svg" alt="Search" /></div>
                         <input type="text" className={styles.searchInput} />
-                        <div className={styles.closeIcon}><img src="x.svg" alt="X" /></div>
+                        <div className={styles.closeIcon}><img src="/x.svg" alt="X" /></div>
                     </div>
                 </div>
 
                 <div className={styles.bellContainer}>
-                <img src="./ring.svg" alt="" />
+                <img src="/ring.svg" alt="" />
 
                     <div className={styles.notificationBadge}></div>
                 </div>

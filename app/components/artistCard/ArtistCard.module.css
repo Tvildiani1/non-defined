@@ -9,6 +9,7 @@
   }
 
   .card:hover {
+    border-radius: 6px;
     background-color: #ffffff33;
   }
   

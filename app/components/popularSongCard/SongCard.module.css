@@ -1,21 +1,19 @@
 .card {
   border-radius: 12px;
-  overflow: hidden;
-  width: 220px;
+  padding: 10px;
   color: white;
   font-family: sans-serif;
   cursor: pointer;
 }
 
 .card:hover {
+  border-radius: 6px;
   background-color: #ffffff33;
 }
 
 .icon {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
+  width: 210px;
+  height: 210px;
 }
 
 .songName {
@@ -30,32 +28,57 @@
   margin: 0 8px 8px 8px;
 }
 
-  @media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+
     .card {
-        width: 112px;
-        padding: 4px;
-      }
-      
-      .icon {
-        height: 104px;
-      }
-    
+      width: 126px;
+      gap: 12px;
     }
 
-  @media (min-width: 1024px) {
-    .card {
-        width: 215px;
-        padding: 4px;
-    }
     .icon {
-        height: 207px;
+      border-radius: 24px;
+      width: 120px;
+      height: 120px;
     }
-    .songName {
-      font-size: 24px;
+
+    .name {
+      font-size: 16px;
+      line-height: 20px;
+    }
+}
+
+@media (min-width: 340px) and (max-width: 767px) {
+
+    .card {
+      width: 125px;
+      gap: 12px;
+    }
+
+    .icon {
+      border-radius: 24px;
+      width: 125px;
+      height: 125px;
+    }
+
+    .name {
+      font-size: 16px;
+      line-height: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .card {
+      gap: 16px;
+    }
+
+    .icon {
+      border-radius: 16px;
+      background: lightgray -0.856px -1.188px / 100% 129.31% no-repeat;
+    }
+
+    .name {
+      font-size: 0.85rem;
       line-height: 28px;
     }
-    .artistName {
-        font-size: 16px;
-        line-height: 20px;
-    }
-  }
+}
