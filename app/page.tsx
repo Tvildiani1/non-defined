@@ -1,3 +1,10 @@
+
+import Player from "./components/player/Player";
+
+export default function Home() {
+  return (
+    <div>
+=======
 "use client";
 
 import Nav from "./components/navigation/nav";
@@ -9,6 +16,9 @@ export default function Home() {
       <div>
         <Nav />
       </div>
+       main
+      <Player icon="/icon/artist.svg" artistName="The Box" songName="Roddy Ricch" />
     </div>
+    
   );
 }

@@ -1,18 +1,27 @@
 .card {
     display: flex;
     width: 112px;
+    padding: 4px;
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
   }
   
   .icon {
-    height: 112px;
+    height: 104px;
     align-self: stretch;
     aspect-ratio: 1/1;
     border-radius: 8px;
     background:  lightgray 50% / cover no-repeat;
   }
+
+.artistDiv {
+    display: flex;
+    width: 98px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+}
 
   .songName {
     align-self: stretch;
@@ -37,12 +46,20 @@
 
   @media (min-width: 768px) and (max-width: 1023px) {
     .card {
-        width: 112px;
-        padding: 4px;
+        width: 164px;
+        height: 206px;
       }
       
       .icon {
-        height: 104px;
+        height: 156px;
+        flex-shrink: 0;
+      }
+      .artistDiv {
+        align-self: stretch;
+      }
+      .songName {
+        font-size: 18px;
+        line-height: 22px;
       }
     
     }
@@ -50,7 +67,7 @@
   @media (min-width: 1024px) {
     .card {
         width: 215px;
-        padding: 4px;
+
     }
     .icon {
         height: 207px;
