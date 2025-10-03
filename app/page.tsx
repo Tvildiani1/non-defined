@@ -25,49 +25,8 @@ export default function Home() {
           </div>
 
           <div className={styles.artistCards}>
-            <h2 className={styles.h2}>Top Artist</h2>
-            <div className={styles.artist}>
-              <ArtistCard name="eminem" icon="/eminem.svg" />
-              <ArtistCard name="eminem" icon="/eminem.svg" />
-              <ArtistCard name="eminem" icon="/eminem.svg" />
-              <ArtistCard name="eminem" icon="/eminem.svg" />
-              <ArtistCard name="eminem" icon="/eminem.svg" />
-            </div>
             
-            <h2 className={styles.h2}>Popular Song</h2>
-            <div className={styles.artist}>
-              <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
-              <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
-              <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
-              <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
-            </div>
-
-            <h2 className={styles.h2}>Top Albums</h2>
-            <div className={styles.album}>
-                <AlbumCard icon="/selfish.svg" artistName="Selfish" songName="2014 - Album" />
-                <AlbumCard icon="/selfish.svg" artistName="Selfish" songName="2014 - Album" />
-                <AlbumCard icon="/selfish.svg" artistName="Selfish" songName="2014 - Album" />
-                <AlbumCard icon="/selfish.svg" artistName="Selfish" songName="2014 - Album" />
-            </div>
-
-            <h2 className={styles.h2}>Top Artist</h2>
-            <div className={styles.artist}>
-              <ArtistCard name="Messy" icon="/messy.svg" />
-              <ArtistCard name="Messy" icon="/messy.svg" />
-              <ArtistCard name="Messy" icon="/messy.svg" />
-              <ArtistCard name="Messy" icon="/messy.svg" />
-              <ArtistCard name="Messy" icon="/messy.svg" />
-            </div>
-
-            <h2 className={styles.h2}>The most listened to hit of the week</h2>
-            <div className={styles.cards}>
-              <MostListened />
-              <MostListened />
-              <MostListened />
-              <MostListened />
-              <MostListened />
-            </div>
-
+            
           </div>
           
         </div>
