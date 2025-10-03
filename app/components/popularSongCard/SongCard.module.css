@@ -70,6 +70,8 @@
 
     .card {
       gap: 16px;
+        width: 215px;
+
     }
 
     .icon {

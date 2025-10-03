@@ -1,3 +1,10 @@
+
+import Player from "./components/player/Player";
+
+export default function Home() {
+  return (
+    <div>
+=======
 "use client";
 
 import { Music } from "lucide-react";
@@ -75,6 +82,9 @@ export default function Home() {
 
       </div>
 
+       main
+      <Player icon="/icon/artist.svg" artistName="The Box" songName="Roddy Ricch" />
     </div>
+    
   );
 }
