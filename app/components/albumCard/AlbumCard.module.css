@@ -6,7 +6,6 @@
     color: white;
     font-family: sans-serif;
     cursor: pointer;
-    margin-bottom: 14px;
   }
 
   .card:hover {
@@ -21,6 +20,7 @@
 
   .artistDiv {
     display: flex;
+    flex-direction: column;
   }
 
   .songName {
@@ -39,8 +39,14 @@
 @media (min-width: 768px) and (max-width: 1023px) {
 
     .card {
-      width: 126px;
+      width: 104px;
       gap: 12px;
+      padding: 10px;
+    }
+
+    .card:hover {
+      border-radius: 6px;
+      background-color: #ffffff33;
     }
 
     .icon {
@@ -53,23 +59,42 @@
       font-size: 16px;
       line-height: 20px;
     }
+
+    .artistDiv {
+      color: white;
+    }
+
+    .artistName {
+      display: flex;
+      margin-bottom: 0;
+    }
+
+    .songName {
+      display: flex;
+      margin-top: 0;
+    }
+
 }
 
 @media (min-width: 340px) and (max-width: 767px) {
 
   .card {
     display: flex;
+    align-items: center;
     flex-direction: row;
-    height: 90px;
+    height: 70px;
+    gap: 8px;
+    padding: 8px;
     color: white;
     font-family: sans-serif;
     cursor: pointer;
+    border-radius: 8px;
     background-color: #ffffff33;
   }
 
   .icon {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
 
   .artistDiv {
@@ -77,21 +102,23 @@
     flex-direction: column;
     justify-content: center;
     height: 80px;
-    width: 150px;
+    width: 140px;
   }
 
   .songName {
-    width: 50px;
+    width: 100px;
     height: 20px;
     font-size: 1rem;
     font-weight: 600;
+    margin-top: 0;
   }
 
   .artistName {
-    width: 90px;
+    width: 50px;
     height: 20px;
     font-size: 0.85rem;
     color: #b3b3b3;
+    margin-bottom: 0;
   }
 }
 

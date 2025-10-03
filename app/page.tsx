@@ -41,7 +41,6 @@ export default function Home() {
               <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
               <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
               <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
-              <PopularCard icon="/abracadabra.svg" artistName="Lady Gaga" songName="Abracadabra" />
             </div>
 
             <h2 className={styles.h2}>Top Albums</h2>

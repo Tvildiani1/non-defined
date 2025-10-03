@@ -70,8 +70,28 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+
   .searchHud {
     display: flex;
     gap: 18px;
+  }
+}
+
+@media (min-width: 340px) and (max-width: 767px) {
+  
+  .searchHud {
+    display: flex;
+    gap: 8px;
+  }
+
+  .searchBar {
+    display: flex;
+    width: 200px;
+    padding: 7px;
+  }
+
+  .searchInput {
+    display: flex;
+    width: 80px;
   }
 }

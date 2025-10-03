@@ -12,8 +12,8 @@ export default function AlbumCard ({icon, artistName, songName} : PopularSongPro
         <div className={styles.card}>
             <img src={icon} alt={artistName} className={styles.icon}/>
             <div className={styles.artistDiv}>
-                <p className={styles.songName}> {songName} </p>
                 <p className={styles.artistName}> {artistName} </p>
+                <p className={styles.songName}> {songName} </p>
             </div>
         </div>
     )
