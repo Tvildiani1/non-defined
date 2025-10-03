@@ -1,20 +1,12 @@
-
-import Player from "./components/player/Player";
-
-export default function Home() {
-  return (
-    <div>
-=======
 "use client";
 
-import { Music } from "lucide-react";
 import ArtistCard from "./components/artistCard/ArtistCard";
+import Player from "./components/player/Player";
 import Header from "./components/header/header";
 import MostListened from "./components/mostListened/MostListened";
 import Nav from "./components/navigation/nav";
 import PopularCard from "./components/popularSongCard/SongCard";
 import styles from "./page.module.css";
-import MusicCard from "./components/musicCard/MusicCard";
 import AlbumCard from "./components/albumCard/AlbumCard";
 
 export default function Home() {
@@ -28,9 +20,9 @@ export default function Home() {
 
         <div className={styles.center}>
 
-          {/* <div className={styles.player}>
-            <p>musicplayer</p>
-          </div> */}
+          <div className={styles.player}>
+            <Player icon="" artistName="" songName="" />
+          </div>
 
           <div className={styles.artistCards}>
             <h2 className={styles.h2}>Top Artist</h2>

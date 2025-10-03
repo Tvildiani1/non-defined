@@ -153,9 +153,9 @@ export default function Player ( {icon, artistName, songName} : MusicCardProps) 
                 <img src={icon} alt={artistName} className={styles.artistIcon}/>
 
                 <div className={styles.artistDetails}>
-
-                    <p className={styles.songTitle}> {songName} </p>
+                    
                     <p className={styles.artistName}> {artistName} </p>
+                    <p className={styles.songTitle}> {songName} </p>
 
                 </div>
             </div>
