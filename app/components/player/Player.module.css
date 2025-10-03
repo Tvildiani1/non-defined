@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   width: 94%;
-  max-width: 1384px;
+  max-width: 1411px;
   height: fit-content;
   margin: 0px 12px;
   padding: 12px;
@@ -16,10 +16,10 @@
   left: 50%;
   transform: translateX(-50.8%);
   z-index: 999;
+  margin: 10px 0 0 46px;
 
 }
 
-/* ---------- */
 .artistInfo {
   display: flex;
   width: 219px;
@@ -46,9 +46,9 @@
 }
 
 .songTitle {
-  color: #FFF;
+  color: grey;
   font-family: Inter;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
@@ -56,18 +56,16 @@
 }
 
 .artistName {
-  color: #D2CECE;
+  color: #ffffff;
   text-align: left;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
   margin: 0;
 }
 
-
-/* ---------- */
 .playerSection {
   display: flex;
   width: 343px;
@@ -352,10 +350,10 @@
 
 /*-------------Tablet------------------------*/
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .main {
-    width: 94%;
-    max-width: 712px;
+    width: 100%%;
+    max-width: 1000px;
     height: 70px;
     padding: 8px 16px;
     align-items: center;
@@ -363,6 +361,7 @@
     border-radius: 16px;
     left: 50%;
     transform: translateX(-51.5%);
+    margin-left: 35px;
     /* gap: 10px; */
 
   }

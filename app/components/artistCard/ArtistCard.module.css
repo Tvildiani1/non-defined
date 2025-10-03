@@ -5,6 +5,12 @@
     width: 56px;
     gap: 8px;
     padding: 4px;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    border-radius: 6px;
+    background-color: #ffffff33;
   }
   
   .icon {

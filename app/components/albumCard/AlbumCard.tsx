@@ -1,4 +1,4 @@
-import styles from './SongCard.module.css'
+import styles from './AlbumCard.module.css'
 
 type PopularSongProps = {
     icon : string;
@@ -6,14 +6,14 @@ type PopularSongProps = {
     songName : string;
 }
 
-export default function PopularCard ({icon, artistName, songName} : PopularSongProps) {
+export default function AlbumCard ({icon, artistName, songName} : PopularSongProps) {
 
     return (
         <div className={styles.card}>
             <img src={icon} alt={artistName} className={styles.icon}/>
             <div className={styles.artistDiv}>
-                <p className={styles.songName}> {songName} </p>
                 <p className={styles.artistName}> {artistName} </p>
+                <p className={styles.songName}> {songName} </p>
             </div>
         </div>
     )

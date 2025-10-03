@@ -1,63 +1,87 @@
 .container {
     display: flex;
+    position: fixed;
+    height: 100vh;
     flex-direction: column;
-    border-radius: 0 10px 10px 0;
-    align-items: flex-start;
-    width: 45px;
+    width: 50px;
     height: 100%;
-    gap: 58px;
-    background-color: #000000;
-    padding: 24px 0 0 12px;
+    gap: 42px;
+    background-color: #0E0913;
+    border-radius: 0 18px 18px 0;
 }
 
 .logo {
-    cursor: pointer;
+    padding: 30px 0 0 8px;
 }
 
 .pages {
     display: flex;
     flex-direction: column;
-    gap: 24px;
 }
 
 .span {
     opacity: 0;
-    white-space: nowrap;
-    transition: opacity 0.5s ease;
 }
 
-.container:hover .span {
-    display: flex;
+.container:hover .span{
     opacity: 1;
-    width: 100px;
-    transition: display 2.5s ease;
-    font-size: 30px;
 }
 
 .container:hover {
-    width: 250%;
-    background-color: #0f0f1a;
-    transition: width 1.18s ease;
-    
-}.link {
+    width: 25%;
+    transition: width 0.3s ease;
+}
+
+.link {
     display: flex;
-    align-items: center;
     text-decoration: none;
-    width: 100%;
-    gap: 12px;
-    color: #ccc;
-    cursor: pointer;
-    padding: 4px 2px;
-    border-radius: 14px;
-    transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    align-items: center;
+    font-size: 20px;
+    width: 200px;
+    padding: 8px;
+    gap: 10px;
+
+    .image {
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+  }
+
+  .span {
+    color: rgb(255, 255, 255);
+    transition: color 0.3s;
+  }
+
+  &:hover {
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+
+    .span {
+        color: rgb(255, 255, 255);
+    }
+    .image {
+        filter: hue-rotate(270deg);
+    }
+  }
 }
 
-.link:hover {
-    background: #ffffff0d;
-    box-shadow: 2px 4px 12px #00000066;
+.active {
+  .span {
+    color: purple;
+  }
+  .image {
+    filter: hue-rotate(270deg);
+  }
+
+  &:hover {
+    .span {
+      color: purple;
+    }
+    .image {
+      filter: hue-rotate(270deg);
+    }
+  }
 }
 
-.link:active {
-    color: #7F00FF;
-    background: #ffffff0d;
+.image {
+    margin-bottom: 19px;
 }

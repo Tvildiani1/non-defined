@@ -1,16 +1,92 @@
+.header {
+}
+
 .main {
     display: flex;
+    margin-top: 5px;
+}
+
+.center{
+    display: block;
+    width: 100%;
+    background: #130C19;
+    font-size: 20px;
+    padding: 20px 22px;
+    padding-right: 0;
+    border-radius: 18px 0 0 18px;
+    margin-top: 1px;
+    margin-left: 58px;
+    margin-right: 0;
+}
+
+.artistCards {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: fill;
+}
+
+.player {
+    display: flex;
+    margin: 12px 12px 12px 12px;
+}
+
+.h2 {
+    font-size: 40px;
+    color: white;
+}
+
+.artist {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    color: #ffffff;
+}
+
+.album {
+  display: flex;
+  flex-wrap: row;
+  gap: 16px;
+
+  > * {
+    flex: 0 0 calc(25% - 16px);
+  }
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
-.rightside {
-    display: flex;
-    background-color: rgb(194, 59, 59);
-    width: 30%;
-    height: 100vh;
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .h2 {
+      font-size: 20px;
+    }
+
+    .player {
+        display: flex;
+    }
 }
 
-.h1 {
-    background: black;
-    color: white;
+@media (min-width: 340px) and (max-width: 767px) {
+
+    .h2 {
+      font-size: 21px;
+    }
+
+    .album {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        width: 500px;
+
+        > * {
+            flex: 0 0 calc(50% - 16px);
+            box-sizing: border-box;
+        }
+    }
 }
