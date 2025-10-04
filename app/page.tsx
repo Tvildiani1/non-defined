@@ -21,7 +21,7 @@ export default function Home() {
         <div className={styles.center}>
 
           <div className={styles.player}>
-            <Player icon="" artistName="" songName="" />
+            <Player icon="roddyRich.svg" artistName="Roddy Ricch" songName="The Box" />
           </div>
 
           <div className={styles.artistCards}>
@@ -74,8 +74,6 @@ export default function Home() {
 
       </div>
 
-       main
-      <Player icon="/icon/artist.svg" artistName="The Box" songName="Roddy Ricch" />
     </div>
     
   );
