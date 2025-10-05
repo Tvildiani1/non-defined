@@ -1,128 +1,523 @@
-.body{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
-  }
-
 .main {
-    background: linear-gradient(180deg, rgba(165, 76, 255, 0.60) -2.25%, rgba(127, 0, 255, 0.03) 84.66%), #000;
+    background: linear-gradient(
+        180deg,
+        rgba(165, 76, 255, 0.6) -2.25%,
+        rgba(127, 0, 255, 0.03) 84.66%
+      ),
+      #000;
     width: 100%;
     height: 1024px;
     position: relative;
-    
-}
-
-/* ---- Headeerr ------*/
-
-.playerHeader {
+  }
+  /* ------- Header ------- */
+  .playerHeader {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 20px 20px;
+    padding: 20px;
     box-sizing: border-box;
-}
-
-
-.backButton {
+  }
+  
+  .backButton {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    padding: 10;
     cursor: pointer;
     padding: 8px;
-    background: linear-gradient(180deg, rgba(165, 76, 255, 0.60) -2.25%, rgba(127, 0, 255, 0.03) 84.66%);
+    background: linear-gradient(
+      180deg,
+      rgba(165, 76, 255, 0.6) -2.25%,
+      rgba(127, 0, 255, 0.03) 84.66%
+    );
     transition: background 0.2s ease;
     width: 56px;
     height: 55px;
     border: none;
-}
-
-.backButton:hover {
-    background: rgba(0, 0, 0, 0.08);
-}
-
-.backIcon {
+  }
+  
+  .backIcon {
     width: 29px;
-    height: 42px;   
-}
-
-.nowPlayingTitle {
-    color: #FFF;
+    height: 42px;
+  }
+  
+  .nowPlayingTitle {
+    color: #fff;
     font-family: Inter;
     font-size: 20px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
-}
-
-.playerHeaderRight {
-    display: flex;
-    width: 112px;
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-    position: relative
-}
-
-.dotsButton {
-    display: flex;
-    width: 56px;
-    height: 56px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    aspect-ratio: 1/1;
-    background-color: transparent;
-    border: none;
-}
-
-.dotsButton:hover {
-    background: rgba(255, 255, 255, 0.1); 
   }
-.dotsIcon {
-    width: 56px;
-    height: 56px;
-}
-
-
-
-.queueButton {
+  
+  .playerHeaderRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .dotsButton,
+  .queueButton {
     display: flex;
     width: 56px;
     height: 56px;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
-    aspect-ratio: 1/1;
     background-color: transparent;
     border: none;
-}
-
-.queueButton:hover {
-    background: rgba(255, 255, 255, 0.1); 
-}
-
-.queueIcon {
+    transition: background 0.2s ease, transform 0.3s ease;
+  }
+  
+  .dotsButton:hover,
+  .queueButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .dotsIcon,
+  .queueIcon {
     width: 56px;
     height: 56px;
-}
+  }
 
-.queuePanel {
+  .shiftLeft {
+    transform: translateX(-473px);
+  }
+  
+  /* ----- Queue Panel------- */
+  .queuePanel {
     position: absolute;
     top: 0;
     right: 0;
     width: 473px;
     height: 100vh;
-    background: rgba(31, 22, 40, 0.7);
     border-radius: 10px 0 0 10px;
-    transform: translateX(100%);  /* დამალვა დასაწყისში */
+    background: rgba(31, 22, 40, 0.70);
+    transform: translateX(100%);
     transition: transform 0.3s ease;
     z-index: 10;
   }
   
   .queuePanel.open {
-    transform: translateX(0); /* slide-in */
+    transform: translateX(0);
+  }
+
+  .panelHeader {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    margin-top: 20px; 
+  }
+
+  .panelHeaderButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(217, 217, 217, 0.04);
+  }
+
+
+  .panelIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .panelTitle {
+    position: relative;
+    transform: translateX(50%);
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+
+
+
+  /* ----- */
+
+
+  .artistWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  }
+
+  .artistIcon {
+    width: 568px;
+    height: 568px;
+      
+  }
+
+  .songInfo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px auto;  
+    padding: 20px; 
+    box-sizing: border-box;
+  }
+
+  .songText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .songTitle {
+    margin: 0;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
   }
   
+  .songArtist {
+    margin: 0;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+
+  .heartButton {
+    display: flex;
+    width: 57px;
+    height: 56px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 30px;
+    background: rgba(217, 217, 217, 0.09);
+  }
+
+  .heartIcon {
+    width: 57px;
+    height: 56px;
+  }
+
+  .heartButton:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+
+  /* --- Player ---- */ 
+
+  .audioPlayer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .timeSlider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: #FFFFFF;
+    outline: none;
+  }
+  
+  
+  .timeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #7F00FF;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .timeSlider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  
+  }
+  
+  .timeLabels {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: white;
+  }
+
+  /* --------- */
+
+.volumeControl {
+    display: flex;
+    width: 160px;
+    padding: 8px;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 10px;
+  }
+  
+  .volumeIcon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  
+  
+  .volumeSlider {
+    -webkit-appearance: none;
+    width: 88px;
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(to right, #FFFFFF 0%, #FFFFFF var(--volume-percent, 0%), #A8A8A8 var(--volume-percent, 0%), #A8A8A8 100%);
+    outline: none;
+  }
+  
+  .volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    margin-top: 0;
+  }
+  
+  
+  .volumeSlider::-moz-range-thumb {
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .volumeLabel {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+
+  /* ---------- */
+
+
+.playerBox {
+    display: flex;
+    align-items: center;
+    gap: 456px;
+    align-self: stretch;
+
+}
+.playerSection {
+    display: flex;
+    width: 343px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  
+  }
+  
+  .playerControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    align-self: stretch;
+  }
+  
+  
+  .seekControl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .seekButton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+  }
+  
+  .seekButton:hover {
+    background: rgba(0, 0, 0, 0.10);
+  }
+  
+  .seekIcon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .seekLabel {
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  
+  .trackControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    align-self: stretch;
+  }
+  
+  .prevButtonWrapper {
+    border-radius: 30px;
+    display: flex;
+    padding: 7.716px 11px 8.284px 8px;
+    background: rgba(162, 162, 162, 0.26);
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+  }
+  
+  .prevButton {
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    align-items: center;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 8px;
+  }
+  
+  .prevButton:hover {
+    background: rgba(0, 0, 0, 0.10);
+  }
+  
+  .PrevIcon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .playPauseButtonWrapper {
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    border-radius: 96px;
+    background: linear-gradient(0deg, rgba(255, 250, 250, 0.15) 0%, rgba(255, 250, 250, 0.15) 100%), #7F00FF;
+    transition: background 0.2s ease;
+  }
+  
+  .playPauseButtonWrapper:hover {
+    background: #7F00FF;
+  
+  }
+  
+  .playPauseButton {
+    flex-shrink: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pauseLines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 1/1;
+  }
+  
+  .pauseLineOne {
+    width: 4px;
+    height: 20px;
+    background: #FFF;
+    border-radius: 2px;
+  
+  }
+  
+  .pauseLineTwo {
+    width: 4px;
+    height: 20px;
+    background: #FFF;
+    border-radius: 2px;
+  }
+  
+  .playIcon {
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 1/1;
+  }
+  
+  .shuffleWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .shuffleButton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    padding: 0px;
+    cursor: pointer;
+    background: transparent;
+  }
+  
+  
+  
+  .shuffleIcon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .audioPlayer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
