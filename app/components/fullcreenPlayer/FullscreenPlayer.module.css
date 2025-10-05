@@ -1,0 +1,128 @@
+.body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+  }
+
+.main {
+    background: linear-gradient(180deg, rgba(165, 76, 255, 0.60) -2.25%, rgba(127, 0, 255, 0.03) 84.66%), #000;
+    width: 100%;
+    height: 1024px;
+    position: relative;
+    
+}
+
+/* ---- Headeerr ------*/
+
+.playerHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+
+.backButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 10;
+    cursor: pointer;
+    padding: 8px;
+    background: linear-gradient(180deg, rgba(165, 76, 255, 0.60) -2.25%, rgba(127, 0, 255, 0.03) 84.66%);
+    transition: background 0.2s ease;
+    width: 56px;
+    height: 55px;
+    border: none;
+}
+
+.backButton:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.backIcon {
+    width: 29px;
+    height: 42px;   
+}
+
+.nowPlayingTitle {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.playerHeaderRight {
+    display: flex;
+    width: 112px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative
+}
+
+.dotsButton {
+    display: flex;
+    width: 56px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    background-color: transparent;
+    border: none;
+}
+
+.dotsButton:hover {
+    background: rgba(255, 255, 255, 0.1); 
+  }
+.dotsIcon {
+    width: 56px;
+    height: 56px;
+}
+
+
+
+.queueButton {
+    display: flex;
+    width: 56px;
+    height: 56px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    background-color: transparent;
+    border: none;
+}
+
+.queueButton:hover {
+    background: rgba(255, 255, 255, 0.1); 
+}
+
+.queueIcon {
+    width: 56px;
+    height: 56px;
+}
+
+.queuePanel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 473px;
+    height: 100vh;
+    background: rgba(31, 22, 40, 0.7);
+    border-radius: 10px 0 0 10px;
+    transform: translateX(100%);  /* დამალვა დასაწყისში */
+    transition: transform 0.3s ease;
+    z-index: 10;
+  }
+  
+  .queuePanel.open {
+    transform: translateX(0); /* slide-in */
+  }
+  
