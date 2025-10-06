@@ -1,3 +1,10 @@
+.body {
+    margin: 0;
+    overflow: hidden;
+}
+
+
+
 .main {
     background: linear-gradient(
         180deg,
@@ -6,15 +13,28 @@
       ),
       #000;
     width: 100%;
-    height: 1024px;
     position: relative;
+    height: 100vh;
+    display: flex;
+
   }
+
+
+  .box {
+    transition: width 0.3s ease;
+    width: 100%;
+  }
+  
+  .boxShrink {
+    width: calc(100% - 473px); 
+  }
+
   /* ------- Header ------- */
   .playerHeader {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     box-sizing: border-box;
   }
   
@@ -79,66 +99,8 @@
     height: 56px;
   }
 
-  .shiftLeft {
-    transform: translateX(-473px);
-  }
+
   
-  /* ----- Queue Panel------- */
-  .queuePanel {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 473px;
-    height: 100vh;
-    border-radius: 10px 0 0 10px;
-    background: rgba(31, 22, 40, 0.70);
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    z-index: 10;
-  }
-  
-  .queuePanel.open {
-    transform: translateX(0);
-  }
-
-  .panelHeader {
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding: 20px;
-    margin-top: 20px; 
-  }
-
-  .panelHeaderButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    padding: 4px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(217, 217, 217, 0.04);
-  }
-
-
-  .panelIcon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .panelTitle {
-    position: relative;
-    transform: translateX(50%);
-    color: #FFF;
-    text-align: center;
-    font-family: Inter;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
-
 
 
 
@@ -159,12 +121,10 @@
   }
 
   .songInfo {
-    display: flex;
     width: 100%;
+    display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 24px auto;  
-    padding: 20px; 
+    padding: 0 35px;
     box-sizing: border-box;
   }
 
@@ -212,10 +172,16 @@
   .heartIcon {
     width: 57px;
     height: 56px;
+    
   }
 
   .heartButton:hover {
     background: rgba(255, 255, 255, 0.15);
+  }
+
+  .heartButton:active .heartIcon {
+    fill: #00F5D4;
+    stroke: #00F5D4;
   }
 
 
@@ -227,7 +193,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 35px;
     box-sizing: border-box;
   }
 
@@ -333,6 +299,7 @@
     align-items: center;
     gap: 456px;
     align-self: stretch;
+    box-sizing: border-box;
 
 }
 .playerSection {
@@ -406,7 +373,6 @@
     border-radius: 30px;
     display: flex;
     padding: 7.716px 11px 8.284px 8px;
-    background: rgba(162, 162, 162, 0.26);
     justify-content: center;
     align-items: center;
     aspect-ratio: 1/1;
@@ -422,6 +388,7 @@
     cursor: pointer;
     border-radius: 50%;
     padding: 8px;
+    background: rgba(162, 162, 162, 0.26);
   }
   
   .prevButton:hover {
@@ -520,4 +487,66 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+  }
+
+
+
+  /* --------- */ 
+
+  /* ----- Queue Panel------- */
+
+
+  .queuePanel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 473px;
+    height: 100vh;
+    border-radius: 10px 0 0 10px;
+    background: rgba(31, 22, 40, 0.70);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 10;
+  }
+  
+  .queuePanel.open {
+    transform: translateX(0);
+  }
+
+  .panelHeader {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    margin-top: 20px; 
+  }
+
+  .panelHeaderButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(217, 217, 217, 0.04);
+  }
+
+
+  .panelIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .panelTitle {
+    position: relative;
+    transform: translateX(50%);
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
   }
