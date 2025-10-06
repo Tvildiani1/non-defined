@@ -8,6 +8,7 @@ interface FullscreenPlayerProps {
 
 import { useState, useRef, useEffect} from "react";
 import styles from "./FullscreenPlayer.module.css";
+import { QueueCard } from "../queuePanelCard/QueueCard";
 
 
 
@@ -310,6 +311,17 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
                 </div>
 
                 <img src="/icon/LinePanel.svg" alt="line" />
+
+                <QueueCard icon="/icon/artist.svg" songName="The Box" artistName="Roddy Ricch" /> 
+
+                <QueueCard icon="/icon/artist.svg" songName="The Box" artistName="Roddy Ricch" /> 
+
+                <QueueCard icon="/icon/artist.svg" songName="The Box" artistName="Roddy Ricch" /> 
+
+                <QueueCard icon="/icon/artist.svg" songName="The Box" artistName="Roddy Ricch" /> 
+                <QueueCard icon="/icon/artist.svg" songName="The Box" artistName="Roddy Ricch" /> 
+                <QueueCard icon="/icon/artist.svg" songName="The Box" artistName="Roddy Ricch" /> 
+                <QueueCard icon="/icon/artist.svg" songName="The Box" artistName="Roddy Ricch" /> 
                     
             </div>
 
