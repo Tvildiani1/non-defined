@@ -28,7 +28,6 @@
 
 .player {
     display: flex;
-    margin: 12px 12px 12px 12px;
 }
 
 .h2 {
@@ -67,12 +66,12 @@
       font-size: 20px;
     }
 
-    .player {
+    .center {
         display: flex;
     }
 }
 
-@media (min-width: 340px) and (max-width: 767px) {
+@media (min-width: 3101px) and (max-width: 767px) {
 
     .h2 {
       font-size: 21px;
