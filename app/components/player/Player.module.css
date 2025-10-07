@@ -318,9 +318,8 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   .main {
     display: flex;
-    width: 689px;
+    width: 87%;
     padding: 0 8px;
-    margin: 0;
   }
 
   .artistInfo {
@@ -354,9 +353,7 @@
 
   /* ---------- */
   .playerSection {
-    flex: 1;
-    min-width: 200px;
-    max-width: 312px;
+    margin-right: 60px;
     gap: 6px;
   }
 

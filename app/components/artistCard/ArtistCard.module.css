@@ -48,6 +48,25 @@
     }
   }
 
+@media (min-width: 340px) and (max-width: 767px) {
+
+  .card {
+    width: 46px;
+    height: 66px;
+  }
+
+  .icon {
+    width: 40px;
+    border: 1px solid grey;
+    border-radius: 999px;
+  }
+
+  .icon:hover {
+    background-color: grey;
+  }
+
+}
+
   @media (min-width: 1024px) {
     .card {
       width: 176px;

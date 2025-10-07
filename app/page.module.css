@@ -69,9 +69,10 @@
     .center {
         display: flex;
     }
+
 }
 
-@media (min-width: 3101px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
 
     .h2 {
       font-size: 21px;
@@ -79,9 +80,7 @@
 
     .album {
         display: flex;
-        flex-wrap: wrap;
         gap: 16px;
-        width: 500px;
 
         > * {
             flex: 0 0 calc(50% - 16px);
