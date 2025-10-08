@@ -9,7 +9,7 @@ interface FullscreenPlayerProps {
 import { useState, useRef, useEffect} from "react";
 import styles from "./FullscreenPlayer.module.css";
 import { QueueCard } from "../queuePanelCard/QueueCard";
-import { title } from "process";
+
 
 
 
@@ -30,6 +30,8 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
     const [isShuffle, setIsShuffle] = useState(false);
     const [isLiked, setIsLiked] = useState(false);
     const [showFavoriteMessage, setShowFavoriteMessage] = useState(false);
+    const [likedSongs, setLikedSongs] = useState<{ [key: string]: {title: string; artist: string} }>({});
+
 
 
     useEffect(() => {
@@ -57,12 +59,28 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
         }
       }, [volume]);
 
-    const songKey = `${songArtist}-${songTitle}`;
+      useEffect(() => {
+        const saved = JSON.parse(localStorage.getItem("likedSongs") || "{}");
+        setLikedSongs(saved);
+      }, []);
 
-    useEffect(() => {
-    const likedSongs = JSON.parse(localStorage.getItem("likedSongs") || "{}");
-    setIsLiked(!!likedSongs[songKey]);
-    }, [songArtist, songTitle]);
+
+      const tracksInfo = [
+        { title: "The Box", artist: "Roddy Ricch", src: "/Audio/track1.mp3" },
+        { title: "Born To Die", artist: "Lana Del Rey", src: "/Audio/track2.mp3" },
+        { title: "Track 3", artist: "Artist 3", src: "/Audio/track3.mp3" },
+        { title: "Track 4", artist: "Artist 4", src: "/Audio/track4.mp3" },
+      ];
+      
+      const currentTrack = tracksInfo[trackIndex];
+
+      const songKey = `${currentTrack.artist}-${currentTrack.title}`;
+
+
+      useEffect(() => {
+        const likedSongs = JSON.parse(localStorage.getItem("likedSongs") || "{}");
+        setIsLiked(!!likedSongs[songKey]);
+        }, [songKey]);
 
 
 
@@ -157,26 +175,44 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
 
     const handleLike = () => {
         setIsLiked((prev) => {
-            const newValue = !prev;
-            const likedSongs = JSON.parse(localStorage.getItem("likedSongs") || "{}");
-    
-            if(newValue) {
-                likedSongs[songKey] = {title : songTitle, artist: songArtist};
-               
-                setShowFavoriteMessage(true);
-                setTimeout(() => setShowFavoriteMessage(false), 2000);
-            } else {
-                delete likedSongs[songKey]
-            }
-    
-            localStorage.setItem("likedSongs", JSON.stringify(likedSongs));
-            
-            return newValue;
+          const newValue = !prev;
+          const likedSongs = JSON.parse(localStorage.getItem("likedSongs") || "{}");
+      
+          if (newValue) {
+            likedSongs[songKey] = { title: currentTrack.title, artist: currentTrack.artist };
+            setShowFavoriteMessage(true);
+            setTimeout(() => setShowFavoriteMessage(false), 2000);
+          } else {
+            delete likedSongs[songKey];
+          }
+      
+          localStorage.setItem("likedSongs", JSON.stringify(likedSongs));
+          return newValue;
         });
-    };
-    
-    
+      };
+      
 
+
+    useEffect(() => {
+        const likedSongs = JSON.parse(localStorage.getItem("likedSongs") || "{}");
+        setIsLiked(!!likedSongs[songKey]);
+      }, [songKey]);
+      
+
+    
+      const handleLikeTrack = (track: { title: string; artist: string }) => {
+        const key = `${track.artist}-${track.title}`;
+        setLikedSongs((prev) => {
+          const newLiked = { ...prev };
+          if (newLiked[key]) {
+            delete newLiked[key];
+          } else {
+            newLiked[key] = track;
+          }
+          localStorage.setItem("likedSongs", JSON.stringify(newLiked));
+          return newLiked;
+        });
+      };
 
   return (
     <div className={styles.main}>
@@ -216,9 +252,9 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
 
             <div className={styles.songInfo}>
                 <div className={styles.songText}>
-                    <p className={styles.songTitle}> {songTitle} </p>
-                    
-                    <p className={styles.songArtist}> {songArtist} </p>
+                    <p className={styles.songTitle}>{currentTrack.title}</p>
+                    <p className={styles.songArtist}>{currentTrack.artist}</p>
+
                 </div>
 
                 <button className={styles.heartButton} onClick={handleLike}
@@ -349,9 +385,10 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
 
         <div className={styles.panelBox}>
             {/* -----Queue panel -------*/}
-            <div className={`${styles.queuePanel} ${isQueueOpen ? styles.open : ""}`} onClick={toggleQueue}>
+            <div className={`${styles.queuePanel} ${isQueueOpen ? styles.open : ""}`} >
                 <div className={styles.panelHeader}>
-                    <button className={styles.panelHeaderButton}>
+                    <button className={styles.panelHeaderButton} onClick={toggleQueue} 
+                    >
                         <img src="/icon/LeftOutline.svg" alt="leftoutline" className={styles.panelIcon}/>
                     </button>
                     <span className={styles.panelTitle}> Next on Queue</span>
@@ -359,17 +396,22 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
 
                 <img src="/icon/LinePanel.svg" alt="line" />
 
-                <QueueCard icon="/icon/artist.svg" songName="The Box" artistName="Roddy Ricch" /> 
 
-                <QueueCard icon="/icon/artist.svg" songName="The Box" artistName="Roddy Ricch" /> 
+                {tracksInfo.map(track => {
+            const key = `${track.artist}-${track.title}`;
 
-                <QueueCard icon="/icon/artist.svg" songName="The Box" artistName="Roddy Ricch" /> 
+            return (
+                <QueueCard
+                key={key}
+                icon="/icon/artist.svg"
+                songName={track.title}
+                artistName={track.artist}
+                isLiked={!!likedSongs[key]}
+                onLike={() => handleLikeTrack(track)}
+            />
+          );
+      })}
 
-                <QueueCard icon="/icon/artist.svg" songName="The Box" artistName="Roddy Ricch" /> 
-                <QueueCard icon="/icon/artist.svg" songName="The Box" artistName="Roddy Ricch" /> 
-                <QueueCard icon="/icon/artist.svg" songName="The Box" artistName="Roddy Ricch" /> 
-                <QueueCard icon="/icon/artist.svg" songName="The Box" artistName="Roddy Ricch" /> 
-                    
             </div>
 
 
