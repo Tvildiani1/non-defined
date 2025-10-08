@@ -9,6 +9,7 @@ interface FullscreenPlayerProps {
 import { useState, useRef, useEffect} from "react";
 import styles from "./FullscreenPlayer.module.css";
 import { QueueCard } from "../queuePanelCard/QueueCard";
+import { title } from "process";
 
 
 
@@ -27,6 +28,9 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
     const [trackIndex, setTrackIndex] = useState(0);
     const [volume, setVolume] = useState(1);
     const [isShuffle, setIsShuffle] = useState(false);
+    const [isLiked, setIsLiked] = useState(false);
+    const [showFavoriteMessage, setShowFavoriteMessage] = useState(false);
+
 
     useEffect(() => {
         if (audioRef.current) {
@@ -52,6 +56,14 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
           audioRef.current.volume = volume;
         }
       }, [volume]);
+
+    const songKey = `${songArtist}-${songTitle}`;
+
+    useEffect(() => {
+    const likedSongs = JSON.parse(localStorage.getItem("likedSongs") || "{}");
+    setIsLiked(!!likedSongs[songKey]);
+    }, [songArtist, songTitle]);
+
 
 
     const handlePlayPause = () => {
@@ -108,7 +120,6 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
     };
     
 
-
     const handleNext = () => {
         if(isShuffle) {
             let nextIndex;
@@ -143,6 +154,29 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
             if(isPlaying) audioRef.current.play(); 
         }
     };
+
+    const handleLike = () => {
+        setIsLiked((prev) => {
+            const newValue = !prev;
+            const likedSongs = JSON.parse(localStorage.getItem("likedSongs") || "{}");
+    
+            if(newValue) {
+                likedSongs[songKey] = {title : songTitle, artist: songArtist};
+               
+                setShowFavoriteMessage(true);
+                setTimeout(() => setShowFavoriteMessage(false), 2000);
+            } else {
+                delete likedSongs[songKey]
+            }
+    
+            localStorage.setItem("likedSongs", JSON.stringify(likedSongs));
+            
+            return newValue;
+        });
+    };
+    
+    
+
 
   return (
     <div className={styles.main}>
@@ -187,7 +221,10 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
                     <p className={styles.songArtist}> {songArtist} </p>
                 </div>
 
-                <button className={styles.heartButton}>
+                <button className={styles.heartButton} onClick={handleLike}
+                style={{
+                    backgroundColor: isLiked ? "#00F5D4" : "rgba(255, 255, 255, 0.25)"
+                  }}>
                     <img src="/icon/heart.svg" alt="hearticon" className={styles.heartIcon}/>
                 </button>
             </div>
@@ -267,6 +304,11 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
                                     </button>
                                 </div>
                                 <div className={styles.playPauseButtonWrapper}>
+                                {showFavoriteMessage && (
+                                    <div className={styles.favoriteMessage}>
+                                        Saved to favorites
+                                    </div>
+                                )}
                                     <button onClick={handlePlayPause} className={styles.playPauseButton}>
                                         {isPlaying ? (
                                         <div className={styles.pauseLines}>
@@ -288,7 +330,12 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
 
                             <div className={styles.shuffleWrapper}>
                                 <button className={styles.shuffleButton}  onClick={() => setIsShuffle(prev => !prev)}> 
-                                    <img src='/icon/shuffle.svg' alt="nexticon" className={styles.shuffleIcon} />
+                                    <img src='/icon/shuffle.svg' alt="nexticon" className={styles.shuffleIcon} 
+                                    style={{
+                                        filter: isShuffle
+                                          ? 'invert(74%) sepia(53%) saturate(662%) hue-rotate(116deg) brightness(101%) contrast(97%)'
+                                          : 'none',
+                                      }}/>
                                 </button>    
                             </div>
                             
@@ -302,7 +349,7 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
 
         <div className={styles.panelBox}>
             {/* -----Queue panel -------*/}
-            <div className={`${styles.queuePanel} ${isQueueOpen ? styles.open : ""}`}>
+            <div className={`${styles.queuePanel} ${isQueueOpen ? styles.open : ""}`} onClick={toggleQueue}>
                 <div className={styles.panelHeader}>
                     <button className={styles.panelHeaderButton}>
                         <img src="/icon/LeftOutline.svg" alt="leftoutline" className={styles.panelIcon}/>
