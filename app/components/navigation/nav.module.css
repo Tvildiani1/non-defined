@@ -1,10 +1,22 @@
+.burgerContainer {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  background: #0a0a0a;
+  padding: 10px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+}
+
 .container {
     display: flex;
     position: absolute;
-    min-height: 285vh;
-    height: 100%;
     flex-direction: column;
     width: 50px;
+    max-height: 288vh;
+    min-height: 288vh;
+    height: 100%;
     gap: 42px;
     background-color: #0E0913;
     border-radius: 0 18px 18px 0;
@@ -58,7 +70,7 @@
     &:hover {
       width: 224px;
       border-radius: 16px;
-      background: rgba(255, 255, 255, 0.05);
+      background: #ffffff0d;
 
     .span {
       color: #ffffff;
@@ -99,32 +111,29 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
 
+  .burgerContainer {
+    display: none;
+  }
+
   .container {
-    display: flex;
-    position: absolute;
-    min-height: 412vh;
+    min-height: 246.6vh;
     height: 100%;
   }
 
-  .link {
+.link {
 
-    .span {
-      color: rgb(255, 255, 255);
-      transition: color 0.3s;
-    }
+  .span {
+    color: #ffffff;
+    transition: color 0.3s;
+  }
 
-
-    &:hover {
-      width: 190px;
+  &:hover {
+      width: 170px;
       border-radius: 16px;
-      background: rgba(255, 255, 255, 0.05);
+      background: #ffffff0d;
 
     .span {
       color: #ffffff;
-    }
-    
-    .image {
-      display: flex;
     }
   }
 
@@ -132,10 +141,6 @@
 
     .span {
       color: purple;
-    }
-
-    .image {
-      filter: hue-rotate(270deg);
     }
 
       &:hover {
@@ -152,11 +157,58 @@
   }
 }
 
-  @media (min-width: 340px) and (max-width: 767px) {
-    
-    .container {
-      display: flex;
-      position: absolute;
-      height: 100%;
-    }
+@media (min-width: 340px) and (max-width: 767px) {
+
+  .burgerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 10px;
+    background-color: #130C19;
   }
+
+  .accesories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 40px;
+  }
+
+  .burgerMenu {
+    width: 28px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .line {
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 4px;
+    transition: 0.3s;
+  }
+
+  .container {
+    transform: translateX(-100%);
+  }
+
+  .open {
+    transform: translateX(0);
+  }
+
+  .burgerContainer {
+        display: flex;
+  }
+
+  .container {
+    position: fixed;
+    top: 90px;
+    height: 100vh;
+  }
+}

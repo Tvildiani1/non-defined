@@ -1,49 +1,121 @@
 .main {
-    display: flex;
-    margin-top: 5px;
+  display: flex;
+  margin-top: 5px;
 }
 
 .center{
-    display: block;
-    width: 100%;
-    height: 82.5vh;
-    background: #130C19;
-    font-size: 20px;
-    padding: 20px 22px;
-    padding-right: 0;
-    border-radius: 18px 0 0 18px;
-    margin-top: 1px;
-    margin-left: 58px;
-    margin-right: 0;
+  display: block;
+  width: 100%;
+  background: #130C19;
+  font-size: 20px;
+  padding: 20px 22px;
+  padding-right: 0;
+  border-radius: 18px 0 0 18px;
+  margin-top: 1px;
+  margin-left: 58px;
+  margin-right: 0;
 }
 
 .player {
-    display: flex;
-    margin: 12px;
+  display: flex;
 }
 
 .pages {
-    display: inline-flex;
-    gap: 32px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  gap: 16px;
+  margin: 5px 0;
 }
 
 .link {
-    display: inline-flex;
-    text-decoration: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 120px;
-    height: 80px;
-    padding: 42px;
-    border-radius: 16px;
-    border: 1px solid #ffffff0d;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 20px;
+  padding: 40px;
+  border: 1px solid grey;
+  border-radius: 16px;
+
+  .span {
+    color: #ffffff;
+    transition: color 0.3s;
+  }
+
+
+  &:hover {
+    background: #ffffff0d;
+  }
+
+  .active {
 
     .span {
-        color: rgb(255, 255, 255);
+      color: purple;
+    }
+
+    .image {
+      filter: hue-rotate(270deg);
     }
 
     &:hover {
-        background: #ffffff0d;
+
+      .span {
+        color: purple;
+      }
+    }
   }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .h2 {
+      font-size: 20px;
+    }
+
+    .center {
+        display: flex;
+        height: 128px;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+    }
+
+    .center {
+      max-width: 408px;
+      width: 100%;
+      padding: 4px;
+      border-radius: 0;
+      margin: 0;
+    }
+
+    .pages {
+      padding: 4px;
+      margin: 0;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 10px;
+    }
+
+    .album {
+        display: flex;
+        flex-wrap: wrap;
+        height: 180px;
+        gap: 16px;
+
+        > * {
+            flex: 0 0 44%;
+        }
+    }
 }

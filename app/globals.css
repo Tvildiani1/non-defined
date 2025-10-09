@@ -1,14 +1,25 @@
 html {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #300e52;
+  overflow-x: hidden;
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+
+  html {
+    width: 100%;
     padding: 0;
-    background-color: #300e52;
+    margin: 0;
     overflow-x: hidden;
+    box-sizing: border-box;
+  }
 }
 
 @media (min-width: 340px) and (max-width: 767px) {
@@ -17,6 +28,7 @@ body {
     width: 100%;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
     box-sizing: border-box;
   }
 }

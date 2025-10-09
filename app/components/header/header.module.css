@@ -50,23 +50,23 @@
 }
 
 .bellContainer {
-    display: flex;
-    width: 42px;
-    height: 42px;
-    padding: 4px;
-    border-radius: 999px;
-    background-color: #62626255;
-    cursor: pointer;
+  display: flex;
+  width: 42px;
+  height: 42px;
+  padding: 4px;
+  border-radius: 999px;
+  background-color: #62626255;
+  cursor: pointer;
 }
 
 .notificationBadge {
-    position: absolute;
-    top: 10px;
-    right: 24px;
-    width: 14px;
-    height: 14px;
-    background: #00ffe5;
-    border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 24px;
+  width: 14px;
+  height: 14px;
+  background: #00ffe5;
+  border-radius: 50%;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -78,20 +78,8 @@
 }
 
 @media screen and (min-width: 340px) and (max-width: 767px) {
-  
-  .searchHud {
-    display: flex;
-    gap: 8px;
-  }
 
-  .searchBar {
-    display: flex;
-    width: 200px;
-    padding: 7px;
-  }
-
-  .searchInput {
-    display: flex;
-    width: 80px;
+  .container {
+    display: none;
   }
 }

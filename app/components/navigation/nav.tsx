@@ -24,26 +24,42 @@ export default function Sidebar() {
   };
 
   return (
-    
-    <div className={styles.container}>
-      
-      <div className={styles.burger} onClick={toggleMenu}>
-        <div className={`${styles.line} ${isOpen ? styles.line1 : ""}`}></div>
-        <div className={`${styles.line} ${isOpen ? styles.line2 : ""}`}></div>
-        <div className={`${styles.line} ${isOpen ? styles.line3 : ""}`}></div>
-      </div>
 
-      <div>
-        <img className={styles.logo} src="/diagrams.svg" alt="open navigation" />
+    <>
+      <div className={styles.burgerContainer}>
+          <div className={styles.burgerMenu} >
+              <img className={styles.burger} src="/burger.svg" alt="Menu" />
+          </div>
+
+          <div className={styles.accesories}>
+              <div className={styles.bellContainer}>
+              <img src="/ring.svg" alt="Notification" />
+              <div className={styles.notificationBadge}></div>
+              </div>
+              <img className={styles.logo} src="/logo.svg" alt="logo" />
+          </div>
       </div>
-      <div className={styles.pages}>
-        {links.map((link) => (
-          <Link key={link.href} href={link.href} className={`${styles.link} ${pathname === link.href ? styles.active : ""}`}>
-            <img className={styles.image} src={link.icon} alt={link.label} />
-            <span className={styles.span}>{link.label}</span>
-          </Link>
-        ))}
+      
+      <div className={`${styles.container} ${isOpen ? styles.open : ""}`}>
+        
+        <div className={styles.burger} onClick={toggleMenu}>
+          <div className={`${styles.line} ${isOpen ? styles.line1 : ""}`}></div>
+          <div className={`${styles.line} ${isOpen ? styles.line2 : ""}`}></div>
+          <div className={`${styles.line} ${isOpen ? styles.line3 : ""}`}></div>
+        </div>
+
+        <div>
+          <img className={styles.logo} src="/diagrams.svg" alt="open navigation" />
+        </div>
+        <div className={styles.pages}>
+          {links.map((link) => (
+            <Link key={link.href} href={link.href} className={`${styles.link} ${pathname === link.href ? styles.active : ""}`}>
+              <img className={styles.image} src={link.icon} alt={link.label} />
+              <span className={styles.span}>{link.label}</span>
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

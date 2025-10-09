@@ -8,6 +8,7 @@ import Nav from "./components/navigation/nav";
 import PopularCard from "./components/popularSongCard/SongCard";
 import styles from "./page.module.css";
 import AlbumCard from "./components/albumCard/AlbumCard";
+import Heading from "./components/heading/heading";
 
 export default function Home() {
   return (
