@@ -4,9 +4,9 @@ import React from "react";
 import styles from "./page.module.scss";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import Nav from "../../components/navigation/nav";
 import Header from "@/app/components/header/header";
 import Player from "@/app/components/player/Player";
+import Sidebar from "../../components/navigation/nav";
 
 const AuthBox: React.FC = () => {
 
@@ -24,7 +24,7 @@ const AuthBox: React.FC = () => {
 
       <div className={styles.main}>
 
-        <Nav />
+        <Sidebar />
 
         <div className={styles.center}>
 

@@ -10,38 +10,37 @@
 }
 
 .container {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    width: 50px;
-    max-height: 288vh;
-    min-height: 288vh;
-    height: 100%;
-    gap: 42px;
-    background-color: #0E0913;
-    border-radius: 0 18px 18px 0;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  width: 50px;
+  height: 100%;
+  top: 88px;
+  gap: 42px;
+  background-color: #0E0913;
+  border-radius: 0 18px 18px 0;
 }
 
 .logo {
-    padding: 0 0 0 8px;
+  padding: 0 0 0 8px;
 }
 
 .pages {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .span {
-    opacity: 0;
+  opacity: 0;
 }
 
 .container:hover .span{
-    opacity: 1;
+  opacity: 1;
 }
 
 .container:hover {
-    width: 25%;
-    transition: width 0.3s ease;
+  width: 25%;
+  transition: width 0.3s ease;
 }
 
 .image {
