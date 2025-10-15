@@ -141,12 +141,6 @@ export default function Player ( {icon, artistName, songName} : MusicCardProps) 
             if(isPlaying) audioRef.current.play(); 
         }
     };
-    
-
-
-      
-
-      
     return (
         <div className={styles.main}>
             <div className={styles.artistInfo}>

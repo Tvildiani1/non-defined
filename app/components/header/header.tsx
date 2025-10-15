@@ -17,8 +17,7 @@ export default function Header() {
                 </div>
 
                 <div className={styles.bellContainer}>
-                <img src="/ring.svg" alt="" />
-
+                    <img src="/ring.svg" alt="Notification" />
                     <div className={styles.notificationBadge}></div>
                 </div>
             

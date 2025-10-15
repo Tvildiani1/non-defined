@@ -20,11 +20,13 @@ export default function Home() {
 
         <div className={styles.center}>
 
-          <div className={styles.player}>
-            <Player icon="roddyRich.svg" artistName="Roddy Ricch" songName="The Box" />
-          </div>
 
           <div className={styles.artistCards}>
+
+            <div className={styles.player}>
+              <Player icon="roddyRich.svg" artistName="Roddy Ricch" songName="The Box" />
+            </div>
+
             <h2 className={styles.h2}>Top Artist</h2>
             <div className={styles.artist}>
               <ArtistCard name="eminem" icon="/eminem.svg" />

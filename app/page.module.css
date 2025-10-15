@@ -1,9 +1,6 @@
-.header {
-}
-
 .main {
     display: flex;
-    margin-top: 5px;
+    margin-top: 0;
 }
 
 .center{
@@ -11,10 +8,10 @@
     width: 100%;
     background: #130C19;
     font-size: 20px;
-    padding: 20px 22px;
+    padding: 20px 16px;
     padding-right: 0;
     border-radius: 18px 0 0 18px;
-    margin-top: 1px;
+    margin-top: 88px;
     margin-left: 58px;
     margin-right: 0;
 }
@@ -28,7 +25,6 @@
 
 .player {
     display: flex;
-    margin: 12px 12px 12px 12px;
 }
 
 .h2 {
@@ -67,26 +63,38 @@
       font-size: 20px;
     }
 
-    .player {
+    .center {
         display: flex;
     }
+
 }
 
-@media (min-width: 340px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .center {
+        margin: 0;
+        padding: 4px;
+        border-radius: 0;
+    }
 
     .h2 {
-      font-size: 21px;
+      font-size: 14px;
     }
 
     .album {
         display: flex;
         flex-wrap: wrap;
+        height: 200px;
         gap: 16px;
-        width: 500px;
 
         > * {
-            flex: 0 0 calc(50% - 16px);
-            box-sizing: border-box;
+            flex: 0 0 44%;
         }
     }
 }
