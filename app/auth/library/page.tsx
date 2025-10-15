@@ -41,6 +41,15 @@ const AuthBox: React.FC = () => {
             ))}
           </div>
           
+        <div className={styles.main}>
+            <Nav />
+        </div>
+        <div className={styles.rightSide}>
+            
+            <div className={styles.player}>
+                <Player icon="roddyRich.svg" artistName="Roddy Ricch" songName="The Box" />
+            </div>
+
         </div>
 
       </div>

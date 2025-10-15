@@ -117,4 +117,24 @@
             flex: 0 0 44%;
         }
     }
+    display: flex;
+    margin-top: 5px;
+}
+
+.center{
+    display: block;
+    width: 100%;
+    background: #130C19;
+    font-size: 20px;
+    padding: 20px 22px;
+    padding-right: 0;
+    border-radius: 18px 0 0 18px;
+    margin-top: 1px;
+    margin-left: 58px;
+    margin-right: 0;
+}
+
+.player {
+    display: flex;
+    margin: 12px 12px 12px 12px;
 }
