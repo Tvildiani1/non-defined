@@ -44,7 +44,7 @@ const AuthBox: React.FC = () => {
           </div>
 
           <div className={styles.albums}>
-            <PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" />
+            <PopularCard icon="/eminem.svg" artistName="unknow" songName="unknow" />
             <PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" />
             <PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" />
             <PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" />

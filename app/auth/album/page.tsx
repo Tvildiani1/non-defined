@@ -17,8 +17,8 @@ const AuthBox: React.FC = () => {
 
   const links = [
     { href: "/auth/library", label: "Playlists", icon: "/playlist.svg" },
-    { href: "/auth/album", label: "Albums", icon: "/albums.svg" },
-    { href: "#", label: "Artist", icon: "/artist.svg" },
+    { href: "#", label: "Albums", icon: "/albums.svg" },
+    { href: "/auth/artist", label: "Artist", icon: "/artist.svg" },
   ];
     return (
     <div>
@@ -44,7 +44,7 @@ const AuthBox: React.FC = () => {
           </div>
 
           <div className={styles.albums}>
-            <PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" />
+            <PopularCard icon="/selfish.svg" artistName="unknow" songName="unknow" />
             <PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" />
             <PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" />
             <PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" />

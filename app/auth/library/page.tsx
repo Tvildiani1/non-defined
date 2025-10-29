@@ -16,7 +16,7 @@ const AuthBox: React.FC = () => {
   const pathname = usePathname();
 
   const links = [
-    { href: "/auth/library", label: "Playlists", icon: "/playlist.svg" },
+    { href: "#", label: "Playlists", icon: "/playlist.svg" },
     { href: "/auth/album", label: "Albums", icon: "/albums.svg" },
     { href: "/auth/artist", label: "Artist", icon: "/artist.svg" },
   ];
@@ -44,7 +44,7 @@ const AuthBox: React.FC = () => {
           </div>
 
           <div className={styles.albums}>
-            <PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" />
+            <PopularCard icon="/messy.svg" artistName="unknow" songName="unknow" />
             <PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" />
             <PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" />
             <PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" />
