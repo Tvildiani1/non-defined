@@ -34,17 +34,38 @@
   @media (min-width: 768px) and (max-width: 1023px) {
     .card {
       width: 128px;
+      height: 164px;
     }
     .icon {
-      height: 128px;
+      width: 128px;
       border-radius: 16px;
       background: lightgray -0.623px -0.905px / 100% 129.31% no-repeat;
     }
+
     .name {
       font-size: 18px;
       line-height: 22px;
     }
   }
+
+@media (min-width: 340px) and (max-width: 767px) {
+
+  .card {
+    width: 46px;
+    height: 66px;
+  }
+
+  .icon {
+    width: 40px;
+    border: 1px solid grey;
+    border-radius: 999px;
+  }
+
+  .icon:hover {
+    background-color: grey;
+  }
+
+}
 
   @media (min-width: 1024px) {
     .card {
@@ -52,12 +73,14 @@
       height: 220px;
       gap: 16px;
     }
+    
     .icon {
       flex: 1 0 0;
       align-self: stretch;
       border-radius: 16px;
       background: lightgray -0.856px -1.188px / 100% 129.31% no-repeat;
     }
+
     .name {
       font-size: 24px;
       line-height: 28px;

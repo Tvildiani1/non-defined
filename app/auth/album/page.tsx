@@ -4,8 +4,11 @@ import React from "react";
 import styles from "./page.module.scss";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
+import Nav from "../../components/navigation/nav";
 import Header from "@/app/components/header/header";
 import Player from "@/app/components/player/Player";
+import PopularCard from "@/app/components/popularSongCard/SongCard";
 import Sidebar from "../../components/navigation/nav";
 
 const AuthBox: React.FC = () => {
@@ -17,14 +20,13 @@ const AuthBox: React.FC = () => {
     { href: "/auth/album", label: "Albums", icon: "/albums.svg" },
     { href: "#", label: "Artist", icon: "/artist.svg" },
   ];
-
     return (
     <div>
       <Header />
 
       <div className={styles.main}>
 
-        <Sidebar />
+        <Nav />
 
         <div className={styles.center}>
 
@@ -40,20 +42,18 @@ const AuthBox: React.FC = () => {
             </Link>
             ))}
           </div>
-          
-        <div className={styles.main}>
-            <Nav />
-        </div>
-        <div className={styles.rightSide}>
-            
-            <div className={styles.player}>
-                <Player icon="roddyRich.svg" artistName="Roddy Ricch" songName="The Box" />
-            </div>
 
+          <div className={styles.albums}>
+            <PopularCard icon="/selfish.svg" artistName="Selfish" songName="2014 - Album" />
+            <PopularCard icon="" artistName="" songName="" />
+            <PopularCard icon="" artistName="" songName="" />
+            <PopularCard icon="" artistName="" songName="" />
+          </div>
+          
         </div>
 
       </div>
-    
+
     </div>
     );
 };

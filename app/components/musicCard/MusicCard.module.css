@@ -28,6 +28,10 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
 
+  .artistDiv {
+    width: 10px;
+  }
+
 }
 
 @media screen and (min-width: 340px) and (max-width:920px) {
@@ -43,7 +47,7 @@
 
   .artistDiv {
     display: flex;
-    width: 70px;
+    width: 120px;
   }
 
   .songName {

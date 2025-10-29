@@ -1,9 +1,9 @@
 .container {
-    display: flex;
-    max-width: 1420px;
+    display: inline-flex;
+    justify-content: space-between;
+    max-width: 99%;
     width: 100%;
-    height: 80px;
-    padding: 8px 4px 4px 8px;
+    padding: 8px;
 }
 
 .container:hover {
@@ -13,22 +13,29 @@
 
 .cardContainer {
     display: flex;
-    width: 49%;
+    width: 50%;
     justify-content: space-between;
-    color: white;
-    padding: 8px 0 15px 0;
-}
-
-.card {
-    display: flex;
 }
 
 .musicRating { 
     display: flex;
+    align-items: center;
+    color: white;
 }
 
 .actionIcons {
+    display: flex;
     padding: 23px 0 25px 0;
-    margin-left: 46%;
 }
 
+@media screen and (max-width: 767px) {
+
+    .cardContainer {
+        width: 420px;
+    }
+
+    .container {
+        width: 95%;
+        gap: 90px;
+    }
+}

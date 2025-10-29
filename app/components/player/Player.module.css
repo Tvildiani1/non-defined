@@ -1,48 +1,33 @@
 .main {
   display: flex;
+  position: fixed;
   align-items: center;
   justify-content: space-between;
-  width: 94%;
-  max-width: 1411px;
-  height: fit-content;
-  margin: 0px 12px;
+  width: 93%;
+  bottom: 20px;
   padding: 12px;
-  /* gap: 323px; */
-  /* flex-shrink: 0; */
   border-radius: 10px;
   background: rgba(165, 76, 255, 0.70);
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50.8%);
-  z-index: 999;
-  margin: 10px 0 0 46px;
-
 }
 
 .artistInfo {
   display: flex;
-  width: 219px;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
   align-self: stretch;
+  align-items: center;
+  width: 219px;
+  gap: 8px;
 }
 
 .artistIcon {
-  flex-shrink: 0;
-  align-self: stretch;
-  aspect-ratio: 1/1;
-  border-radius: 8px;
-  background: lightgray 50% / cover no-repeat;
+  width: 190px;
 }
 
 .artistDetails {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2px;
   flex-shrink: 0;
+  gap: 2px;
 }
 
 .songTitle {
@@ -56,6 +41,7 @@
 
 .artistName {
   color: grey;
+  text-align: left;
   font-family: sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -65,12 +51,10 @@
 
 .playerSection {
   display: flex;
-  width: 343px;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   gap: 12px;
-  flex-shrink: 0;
-
 }
 
 .playerControls {
@@ -78,31 +62,23 @@
   justify-content: center;
   align-items: center;
   gap: 48px;
-  align-self: stretch;
 }
 
 
 .seekControl {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  
 }
 
 .seekButton {
-  position: relative;
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
-  border: none;
-  border-radius: 50%;
   padding: 0;
   cursor: pointer;
+  border-radius: 50%;
+  border: none;
   background: transparent;
-}
-
-.seekButton:hover {
-  background: rgba(0, 0, 0, 0.10);
 }
 
 .seekIcon {
@@ -112,12 +88,11 @@
 
 .seekLabel {
   position: absolute;
-  color: white;
   font-size: 14px;
   font-weight: 400;
-  line-height: normal;
   top: 50%;
   left: 50%;
+  color: white;
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
@@ -127,17 +102,16 @@
   justify-content: center;
   align-items: center;
   gap: 15px;
-  align-self: stretch;
 }
 
 .prevButtonWrapper {
-  border-radius: 30px;
   display: flex;
-  padding: 7.716px 11px 8.284px 8px;
-  background: rgba(162, 162, 162, 0.26);
   justify-content: center;
   align-items: center;
   aspect-ratio: 1/1;
+  padding: 7.716px 11px 8.284px 8px;
+  border-radius: 30px;
+  background: rgba(162, 162, 162, 0.26);
 }
 
 .prevButton {
@@ -145,15 +119,10 @@
   justify-content: center;
   background: transparent;
   align-items: center;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  border-radius: 50%;
   padding: 8px;
-}
-
-.prevButton:hover {
-  background: rgba(0, 0, 0, 0.10);
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
 }
 
 .PrevIcon {
@@ -163,9 +132,9 @@
 
 .playPauseButtonWrapper {
   display: flex;
-  padding: 8px;
   justify-content: center;
   align-items: center;
+  padding: 8px;
   flex-shrink: 0;
   aspect-ratio: 1/1;
   border-radius: 96px;
@@ -175,7 +144,6 @@
 
 .playPauseButtonWrapper:hover {
   background: #7F00FF;
-
 }
 
 .playPauseButton {
@@ -347,23 +315,13 @@
 
 /*-------------Tablet------------------------*/
 
-@media (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .main {
-    width: 100%%;
-    max-width: 1000px;
-    height: 70px;
-    padding: 8px 16px;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 16px;
-    left: 50%;
-    transform: translateX(-51.5%);
-    margin-left: 35px;
-    /* gap: 10px; */
-
+    display: flex;
+    width: 87%;
+    padding: 0 8px;
   }
 
-  /* ---------- */
   .artistInfo {
     flex: 1;
     min-width: 120px;
@@ -395,9 +353,7 @@
 
   /* ---------- */
   .playerSection {
-    flex: 1;
-    min-width: 200px;
-    max-width: 312px;
+    margin-right: 60px;
     gap: 6px;
   }
 
@@ -476,11 +432,6 @@
   .timeLabels {
     font-size: 11px;
   }
-
-
-
-
-  /* --------- */
   
   .volumeControl {
     width: auto;
@@ -506,16 +457,15 @@
 
 
 /* ---------- Mobile -------------------- */
-@media (max-width: 787px) {
+@media (min-width: 340px) and (max-width: 767px) {
   .main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 82%;
     height: fit-content;
     padding: 8px;
     border-radius: 12px;
-    left: 50%;
+    left: 52%;
     transform: translateX(-52%);
   }
   

@@ -83,6 +83,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    width: 108px;
     height: 70px;
     gap: 8px;
     padding: 8px;
