@@ -1,0 +1,41 @@
+.container {
+    display: inline-flex;
+    justify-content: space-between;
+    max-width: 99%;
+    width: 100%;
+    padding: 8px;
+}
+
+.container:hover {
+    background-color: #6d6d6d74;
+    border-radius: 18px;
+}
+
+.cardContainer {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.musicRating { 
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.actionIcons {
+    display: flex;
+    padding: 23px 0 25px 0;
+}
+
+@media screen and (max-width: 767px) {
+
+    .cardContainer {
+        width: 420px;
+    }
+
+    .container {
+        width: 95%;
+        gap: 90px;
+    }
+}

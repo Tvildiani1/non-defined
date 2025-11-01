@@ -61,6 +61,10 @@
   }
 }
 
+.album > * {
+  cursor: pointer;
+}
+
 .albums {
   display: flex;
   gap: 4px;
