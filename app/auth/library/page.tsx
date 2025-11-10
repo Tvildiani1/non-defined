@@ -44,10 +44,10 @@ const AuthBox: React.FC = () => {
           </div>
 
           <div className={styles.albums}>
-            <PopularCard icon="/messy.svg" artistName="unknow" songName="unknow" />
-            <PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" />
-            <PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" />
-            <PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" />
+            <Link href="/auth/singlePlaylist"><PopularCard icon="/eminem.svg" artistName="unknow" songName="unknow" /></Link>
+            <Link href="/auth/singlePlaylist"><PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" /></Link>
+            <Link href="/auth/singlePlaylist"><PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" /></Link>
+            <Link href="/auth/singlePlaylist"><PopularCard icon="/logo.svg" artistName="unknow" songName="unknow" /></Link>
           </div>
           
         </div>
