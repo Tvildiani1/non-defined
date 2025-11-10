@@ -1,0 +1,102 @@
+.main {
+    display: flex;
+    margin-top: 0;
+}
+
+.center{
+  display: block;
+  width: 100%;
+  background: linear-gradient(117deg, #A54CFF 0%, #7F00FF1A 100%), #000;;
+  font-size: 20px;
+  padding: 20px 22px;
+  padding-right: 0;
+  border-radius: 18px 0 0 18px;
+  margin-top: 86px;
+  margin-left: 54px;
+  margin-right: 0;
+}
+
+.player {
+  display: flex;
+}
+
+.pageCenterHead{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-right: 20px;
+  color: white;
+  width: fill;
+}
+
+.pageCenterHeadText{
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+  padding: 20px;
+  width: fill;
+}
+
+.songName span {
+  margin-top: 0;
+}
+
+.songName p {
+  font-size: 50px;
+  margin-bottom: 0;
+}
+
+.centerBtns {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 50px;
+  gap: 18px;
+  max-width: 320px;
+  width: 100%;
+  height: 100px;
+}
+
+.btn {
+  display: flex;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: grey;
+  border-radius: 999px;
+}
+
+.playBtn {
+  background: #A54CFF;
+  border-radius: 999px;
+}
+
+.hr {
+  width: 98%;
+  border: solid 1px white;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .center {
+    height: 134vh;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .center {
+    max-width: 408px;
+    width: 100%;
+    padding: 4px;
+    border-radius: 0;
+    margin: 0;
+  }
+}
