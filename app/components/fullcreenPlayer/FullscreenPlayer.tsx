@@ -23,7 +23,7 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
 
     const audioRef = useRef<HTMLAudioElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);
-    const [currentTime, setCurrentTime] = useState(0);
+    const [currentTime, setCurrentTime] = useState(0);""
     const [duration, setDuration] = useState(0);
     const [trackIndex, setTrackIndex] = useState(0);
     const [volume, setVolume] = useState(1);
@@ -355,6 +355,7 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
                                         <img src="/icon/play.svg" alt="play" className={styles.playIcon} />
                                         )}
                                     </button>
+                                    
                                 </div>
 
                                 <div className={styles.prevButtonWrapper}>
@@ -408,6 +409,8 @@ export function FullscreenPlayer( { songArtist, songTitle} : FullscreenPlayerPro
                 artistName={track.artist}
                 isLiked={!!likedSongs[key]}
                 onLike={() => handleLikeTrack(track)}
+                audio=""
+                
             />
           );
       })}

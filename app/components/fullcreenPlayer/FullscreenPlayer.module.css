@@ -23,7 +23,7 @@
   .box {
     transition: width 0.3s ease;
     width: 100%;
-    margin-right: 20px;    /* 20px ადგილი queue panel–ის წინ */
+    margin-right: 20px;    
   }
   
   .boxShrink {
@@ -590,3 +590,67 @@
     font-weight: 600;
     line-height: normal;
   }
+
+
+
+
+  /* ------ Tableet ------ */
+
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .main {
+      height: 100vh;       
+      overflow-y: auto;      
+      flex-direction: column;
+    }
+
+    .box {
+        width: 100%; 
+        transition: width 0.3s ease;
+        position: relative; 
+      }
+      
+  
+    .songInfo {
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      gap: 8px;
+    }
+  
+    .audioPlayer {
+      gap: 20px;
+      padding: 20px;
+      width: 100%;
+    }
+  
+    .playerBox {
+      gap: 152px;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .artistIcon {
+      width: 400px;
+      height: 400px;
+      margin: 0 auto;
+    }
+
+    .queuePanel {
+        position: fixed;   
+        top: 0;
+        right: 0;
+        width: 473px;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+        background: rgba(31, 22, 40, 0.7);
+        transform: translateX(100%); 
+        transition: transform 0.3s ease;
+        z-index: 1000;    
+      }
+      
+      .queuePanel.open {
+        transform: translateX(0);
+      }
+}
+  
+  

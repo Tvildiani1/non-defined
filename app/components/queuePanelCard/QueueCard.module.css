@@ -93,51 +93,57 @@
     height: 24px;
   }
 
-  /* @media (min-width: 768px) and (max-width: 1023px) {
-    .card {
-      width: 128px;
-    }
-    .icon {
-      height: 128px;
-      border-radius: 16px;
-      background: lightgray -0.623px -0.905px / 100% 129.31% no-repeat;
-    }
+  .iconWrapper {
+    display: flex;
+    position: relative;
+  }
 
-    .artistName {
+  .playPauseButton {
+    position: absolute;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-    }
+  }
+  .pauseLines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 1/1;
+  }
+  
+  .pauseLineOne {
+    width: 4px;
+    height: 20px;
+    background: #FFF;
+    border-radius: 2px;
+  
+  }
+  
+  .pauseLineTwo {
+    width: 4px;
+    height: 20px;
+    background: #FFF;
+    border-radius: 2px;
+  }
+  
+  .playIcon {
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 1/1;
+  }
 
-    .songName {
-
-    }
-
-    .heartSection {
-
-    }
+   @media (min-width: 768px) and (max-width: 1023px) {
+    
     
   }
 
-  @media (min-width: 1024px) {
-    .card {
-      width: 176px;
-      height: 212px;
-      gap: 16px;
-    }
-    .icon {
-      flex: 1 0 0;
-      align-self: stretch;
-      border-radius: 16px;
-      background: lightgray -0.856px -1.188px / 100% 129.31% no-repeat;
-    }
-    .artistName {
-
-    }
-
-    .songName {
-
-    }
-
-    .heartSection {
-
-    }
-  } */
+  @media (max-width: 1024px) {
+    
+  } 
